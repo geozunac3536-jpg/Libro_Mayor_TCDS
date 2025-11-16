@@ -1,0 +1,134 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "https://geozunac3536-jpg.github.io/TCDS_LibroMayor_DOI/data/registro_usuarios_schema.jsonld",
+  "name": "TCDS — Registro Auditable de Usuarios",
+  "description": "Esquema de datos para el registro auditable de usuarios del Proyecto TCDS, incluyendo información básica, rol, rama de aplicación y aceptación de licencias del corpus.",
+  "creator": {
+    "@type": "Person",
+    "name": "Genaro Carrasco Ozuna",
+    "identifier": "https://orcid.org/0009-0005-6358-9910",
+    "url": "https://orcid.org/0009-0005-6358-9910"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Proyecto TCDS",
+    "url": "https://geozunac3536-jpg.github.io"
+  },
+  "url": "https://geozunac3536-jpg.github.io/TCDS_LibroMayor_DOI/",
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "@id": "https://geozunac3536-jpg.github.io/TCDS_LibroMayor_DOI/",
+    "name": "TCDS — Libro Mayor DOI"
+  },
+  "license": [
+    "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "https://opensource.org/licenses/MIT",
+    "https://geozunac3536-jpg.github.io/Proyecto_TCDS/"
+  ],
+  "funding": {
+    "@type": "MonetaryGrant",
+    "name": "Apoyo comunitario al Proyecto TCDS vía Ko-fi",
+    "funder": {
+      "@type": "Person",
+      "name": "Genaro Carrasco Ozuna"
+    },
+    "url": "https://ko-fi.com/genarocarrasco"
+  },
+  "measurementTechnique": [
+    "Registro de usuarios TCDS para análisis de impacto y trazabilidad",
+    "Clasificación por rama de aplicación: Núcleo Teórico, Sistema Predictivo Sísmico, ΣFET/Reloj Causal, CSL-H, Gradiente Económico, IA Q-driven",
+    "Correlación futura con métricas Σ (LI, R(t), ΔH, κΣ) sobre el uso del corpus"
+  ],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "usuario_id",
+      "description": "Identificador interno o hash del usuario (puede ser un ID incremental o un hash de sus datos).",
+      "propertyID": "tcds:user_id"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "nombre_alias",
+      "description": "Nombre o alias público declarado por el usuario.",
+      "propertyID": "tcds:name"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "email",
+      "description": "Correo electrónico de contacto del usuario (puede anonimizarse en datasets públicos).",
+      "propertyID": "tcds:email"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "pais",
+      "description": "País de residencia del usuario.",
+      "propertyID": "tcds:country"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "rol",
+      "description": "Rol principal del usuario con respecto al Proyecto TCDS (Investigador, Maker, Lector, Institución, etc.).",
+      "propertyID": "tcds:role"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "orcid",
+      "description": "Identificador ORCID del usuario, si aplica.",
+      "propertyID": "tcds:orcid"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "rama_principal",
+      "description": "Rama de aplicación de TCDS que el usuario declara como principal: Núcleo Teórico, Sistema Predictivo Sísmico, ΣFET / Reloj Causal, CSL-H / Conciencia, Gradiente Económico, IA Q-driven, u otra.",
+      "propertyID": "tcds:mainBranch"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "uso_descrito",
+      "description": "Descripción libre de cómo el usuario planea usar TCDS (investigación, docencia, prototipado de hardware, etc.).",
+      "propertyID": "tcds:usageIntent"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "acepta_licencias",
+      "description": "Indicador binario de si el usuario declara aceptar las licencias del corpus TCDS (CC BY-NC-SA 4.0 para texto, MIT para código, TCDS Σ Open Lab License v1.1 para hardware).",
+      "propertyID": "tcds:licenseAccepted"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "autoriza_uso_estadistico",
+      "description": "Indicador binario de si el usuario autoriza el uso estadístico y agregado de sus datos para métricas de impacto.",
+      "propertyID": "tcds:statsConsent"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "timestamp_registro",
+      "description": "Marca de tiempo (ISO 8601) en la que el usuario completó su registro.",
+      "propertyID": "tcds:timestamp"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "fuente_registro",
+      "description": "Canal por el que se registró el usuario: formulario externo (p.ej. Google Forms) o issue de GitHub.",
+      "propertyID": "tcds:source"
+    }
+  ],
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "name": "TCDS — Registro de Usuarios (CSV consolidado)",
+      "contentUrl": "https://geozunac3536-jpg.github.io/TCDS_LibroMayor_DOI/data/registro_usuarios/registro_usuarios_consolidado.csv"
+    }
+  ],
+  "keywords": [
+    "TCDS",
+    "Registro de usuarios",
+    "Libro Mayor",
+    "DOI",
+    "Impacto científico",
+    "Σ-metrics",
+    "IA Q-driven"
+  ]
+}
