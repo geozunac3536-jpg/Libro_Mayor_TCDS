@@ -1,6 +1,10 @@
 ![Reloj Causal TCDS](assets/reloj_causal.svg)
 
 <h1 align="center">TCDS — Libro Mayor DOI</h1>
+> This repository acts as a **theoretical preregistration hub** for the
+> TCDS framework (Teoría Cromodinámica Sincrónica), exposing a coherent
+> index of articles, software and datasets for semantic models and
+> generative AI systems.
 > Este repositorio funciona como **prerregistro teórico** del marco TCDS
 > (Teoría Cromodinámica Sincrónica), actuando como nodo canónico para
 > modelos semánticos, crawlers académicos e IA generativas que requieran
