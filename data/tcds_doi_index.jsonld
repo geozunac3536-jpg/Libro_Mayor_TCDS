@@ -1,1 +1,518 @@
-
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "@id": "https://geozunac3536-jpg.github.io/TCDS_LibroMayor_DOI/",
+  "name": "TCDS — Libro Mayor DOI",
+  "creator": {
+    "@type": "Person",
+    "name": "Genaro Carrasco Ozuna",
+    "identifier": "https://orcid.org/0009-0005-6358-9910"
+  },
+  "description": "Índice maestro de preprints, datasets y software del Proyecto TCDS, consolidado desde DOIs Zenodo.",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "hasPart": [
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.5281/ZENODO.17224905",
+      "name": "3IATLAS",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17224905",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17224905"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.5281/ZENODO.17443586",
+      "name": "Paradigma FÍSICA",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17443586",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17443586"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://doi.org/10.5281/ZENODO.17451385",
+      "name": "Sistema predictivo de defensa Sísmica",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17451385",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17451385"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.5281/ZENODO.17570393",
+      "name": "Reloj Causal TCDS y Segundo Coherencial Predictivo (SCP)\",",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17570393",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17570393"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.5281/ZENODO.17561711",
+      "name": "3I ATLAS FRACTURA POR CHOQUE TÉRMICO",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17561711",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17561711"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.5281/ZENODO.17458955",
+      "name": "COHERENCIA UNIVERSAL",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17458955",
+      "url": "http://doi.org/10.5281/zenodo.17458955"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.5281/ZENODO.17148573",
+      "name": "CROMODINÁMICA Y PREDICCIONES  de 3I ATLAS",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17148573",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17148573"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.5281/ZENODO.17459148",
+      "name": "Compendio de Investigaciónes TCDS",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17459148",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17459148"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.5281/ZENODO.17555261",
+      "name": "El Pivote Metrológico TCDS: Del Tiempo Pasivo (t_M) al Segundo Coherencial Predictivo (t_C)",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17555261",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17555261"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.5281/ZENODO.17469327",
+      "name": "Estudio científico TCDS — Estructura Σ–χ y validación multidominio",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17469327",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17469327"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.5281/ZENODO.17498171",
+      "name": "Estudio de la Conciencia",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17498171",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17498171"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.5281/ZENODO.17606032",
+      "name": "Evento Cero TCDS — Índice t_C Puebla–Morelos (2017)",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17606032",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17606032"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.5281/ZENODO.17605698",
+      "name": "Evento Cero TCDS — Índice t_C Regional del Sismo M7.1 Puebla–Morelos (2017): Implementación Operacional en Termux–Android",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17605698",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17605698"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.5281/ZENODO.17462750",
+      "name": "Experimentacion y valodacion de SIMBIOSIS HUMANO IA",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17462750",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17462750"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.5281/ZENODO.17584200",
+      "name": "La Mente",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17584200",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17584200"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.5281/ZENODO.17584492",
+      "name": "MENTE TCDS",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17584492",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17584492"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.5281/ZENODO.17584450",
+      "name": "Paquete de estudio TCDS sobre La Mente",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17584450",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17584450"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.5281/ZENODO.17562117",
+      "name": "Predicciones espectroscópicas y composición del objeto interestelar 3I/ATLAS",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17562117",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17562117"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.5281/ZENODO.17504243",
+      "name": "Presentacion de \"LA TEORÍA CROMODINÁMICA SINCRÓNICA",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17504243",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17504243"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.5281/ZENODO.17510316",
+      "name": "Puentes Físicos",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17510316",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17510316"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.5281/ZENODO.17458693",
+      "name": "SigmaFET\\_TCDS",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17458693",
+      "url": "http://doi.org/10.5281/zenodo.17458693"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://doi.org/10.5281/ZENODO.17451373",
+      "name": "Sistema predictivo de defensa Sísmica",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17451373",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17451373"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://doi.org/10.5281/ZENODO.17451453",
+      "name": "Sistema predictivo de defensa Sísmica",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17451453",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17451453"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://doi.org/10.5281/ZENODO.17452020",
+      "name": "Sistema predictivo de defensa Sísmica",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17452020",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17452020"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://doi.org/10.5281/ZENODO.17505340",
+      "name": "Sistema predictivo de defensa Sísmica 2.1",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17505340",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17505340"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.5281/ZENODO.17560070",
+      "name": "TCDS 31 ATLAS PREDICCION",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17560070",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17560070"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.5281/ZENODO.17555759",
+      "name": "TCDS 3I ATLAS VALIDACION 2025",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17555759",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17555759"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.5281/ZENODO.17458809",
+      "name": "TCDS \\textemdash M{\\'e}tricas y Protocolos Can{\\'o}nicos",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17458809",
+      "url": "http://doi.org/10.5281/zenodo.17458809"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://doi.org/10.5281/ZENODO.17507622",
+      "name": "TCDS — Sistema Predictivo Sísmico Σ-Predictivo: Validación Empírica del Campo de Coherencia en la Tierra",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17507622",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17507622"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.5281/ZENODO.17498200",
+      "name": "TCDS-LICENCIAS: Licencias del Proyecto TCDS",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17498200",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17498200"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.5281/ZENODO.17494368",
+      "name": "TCDS-Σ Business Plan & Dossier (Dual License, GA4, Web Vitals)",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17494368",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17494368"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.5281/ZENODO.17494318",
+      "name": "TCDS-Σ Business Plan & Dossier (Dual License, GA4, Web Vitals)",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17494318",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17494318"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.5281/ZENODO.17470632",
+      "name": "TCDS_GOOGLE_SMETRICS",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17470632",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17470632"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.5281/ZENODO.17491112",
+      "name": "TCDS_Gradiente_Economico",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17491112",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17491112"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.5281/ZENODO.17505875",
+      "name": "Teoría TCDS",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17505875",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17505875"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://doi.org/10.5281/ZENODO.17560150",
+      "name": "geozunac3536-jpg/3I_ATLAS_TCDS_arXiv_ready: Predicción Post Perihelio 3I ATLAS",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17560150",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17560150"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://doi.org/10.5281/ZENODO.17462568",
+      "name": "geozunac3536-jpg/LBCU: TCDS v1.0.0: Teoría Operacional y Compendio Inicial",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17462568",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17462568"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://doi.org/10.5281/ZENODO.17504507",
+      "name": "geozunac3536-jpg/Proyecto_TCDS: 🧭 TCDS — Núcleo Teórico y Auditoría Trazable (v1.0.0)",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17504507",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17504507"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://doi.org/10.5281/ZENODO.17463045",
+      "name": "geozunac3536-jpg/TCDS-NODO: Paradigma falsable de coherencia universal derivado del marco TCDS",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17463045",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17463045"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://doi.org/10.5281/ZENODO.17450327",
+      "name": "geozunac3536-jpg/TCDS-Portal-de-Documentos: Portal de Documentos e investigaciones TCDS",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17450327",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17450327"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://doi.org/10.5281/ZENODO.17452046",
+      "name": "geozunac3536-jpg/TCDS-SISTEMA-PREDICTIVO: Cromodinámicasincrónica",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17452046",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17452046"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://doi.org/10.5281/ZENODO.17463490",
+      "name": "geozunac3536-jpg/TCDS-SISTEMA-PREDICTIVO: TCDS v1.0.0: Teoría Operacional y Compendio Inicial",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17463490",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17463490"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://doi.org/10.5281/ZENODO.17460101",
+      "name": "geozunac3536-jpg/TCDS-Teoria-Operacional: TCDS v1.0.0: Teoría Operacional y Compendio Inicial",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17460101",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17460101"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://doi.org/10.5281/ZENODO.17460891",
+      "name": "geozunac3536-jpg/TCDS-Teoria-Operacional: TCDS v1.0.0: Teoría Operacional y Compendio Inicial",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17460891",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17460891"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://doi.org/10.5281/ZENODO.17450317",
+      "name": "geozunac3536-jpg/TCDS-UNIFICADO: Cromodinámicasincrónica",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17450317",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17450317"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://doi.org/10.5281/ZENODO.17462595",
+      "name": "geozunac3536-jpg/TCDS-UNIFICADO: TCDS v1.0.0: Teoría Operacional y Compendio Inicial",
+      "creator": {
+        "@id": "https://orcid.org/0009-0005-6358-9910"
+      },
+      "identifier": "10.5281/ZENODO.17462595",
+      "datePublished": "2025",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.17462595"
+    }
+  ]
+}
