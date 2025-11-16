@@ -71,6 +71,36 @@
       color: var(--accent-soft);
       font-weight: 600;
     }
+    .hero-actions {
+      margin-top: 14px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .btn-kofi {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(0, 224, 255, 0.5);
+      background: radial-gradient(circle at top left, rgba(0, 224, 255, 0.2), rgba(0,0,0,0.8));
+      color: var(--text);
+      font-size: 0.82rem;
+      font-weight: 500;
+      text-decoration: none;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.6);
+      cursor: pointer;
+    }
+    .btn-kofi span.icon {
+      font-size: 1.1rem;
+    }
+    .btn-kofi:hover {
+      background: radial-gradient(circle at top left, rgba(0, 224, 255, 0.3), rgba(0,0,0,0.9));
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
     .hero-image {
       display: flex;
       justify-content: center;
@@ -208,7 +238,6 @@
     }
   </style>
 
-  <!-- JSON data for interactive table -->
   <script>
     window.TCDS_DOIS = [];
   </script>
@@ -226,6 +255,10 @@
           <div class="chip">Total de registros: <strong id="metric-total">–</strong></div>
           <div class="chip">Con DOI trazable: <strong id="metric-doi">–</strong></div>
           <div class="chip">Año más reciente: <strong id="metric-year">–</strong></div>
+        </div>
+        <div class="hero-actions">
+          <a class="btn-kofi" href="https://ko-fi.com/genarocarrasco" target="_blank" rel="noopener">
+          </a>
         </div>
         <div class="meta">
           <span>Autor: <strong>Genaro Carrasco Ozuna</strong></span>
@@ -271,14 +304,13 @@
           </tr>
         </thead>
         <tbody id="tbody">
-          <!-- rows injected by JS -->
         </tbody>
       </table>
     </section>
 
     <div class="meta" style="margin-top: 12px;">
       <span>Datos fuente: <code>data/tcds_doi_index.csv</code> y <code>data/tcds_doi_index.jsonld</code>.</span>
-      <span>Este panel es estático: sólo HTML + CSS + JS, listo para GitHub Pages.</span>
+      <span>Licencias: CC BY-NC-SA 4.0 (texto) / MIT (código) / TCDS Σ Open Lab License v1.1 (hardware).</span>
     </div>
   </div>
 
@@ -337,7 +369,7 @@
   {
     "title": "COHERENCIA UNIVERSAL",
     "doi": "10.5281/ZENODO.17458955",
-    "year": "",
+    "year": null,
     "type": "misc",
     "url": "http://doi.org/10.5281/zenodo.17458955"
   },
@@ -442,7 +474,7 @@
   {
     "title": "SigmaFET\\_TCDS",
     "doi": "10.5281/ZENODO.17458693",
-    "year": "",
+    "year": null,
     "type": "misc",
     "url": "http://doi.org/10.5281/zenodo.17458693"
   },
@@ -491,7 +523,7 @@
   {
     "title": "TCDS \\textemdash M{\\'e}tricas y Protocolos Can{\\'o}nicos",
     "doi": "10.5281/ZENODO.17458809",
-    "year": "",
+    "year": null,
     "type": "misc",
     "url": "http://doi.org/10.5281/zenodo.17458809"
   },
@@ -631,7 +663,6 @@
     const filterYear = document.getElementById('filter-year');
     const resetBtn = document.getElementById('reset-filters');
 
-    // Populate year filter
     const years = Array.from(new Set(raw.map(r => r.year).filter(Boolean))).sort();
     years.forEach(y => {
       const opt = document.createElement('option');
@@ -640,14 +671,13 @@
       filterYear.appendChild(opt);
     });
 
-    // Metrics
     document.getElementById('metric-total').textContent = raw.length;
     document.getElementById('metric-doi').textContent = raw.filter(r => r.doi).length;
     const maxYear = years[years.length - 1] || '—';
     document.getElementById('metric-year').textContent = maxYear;
 
     let sortKey = 'year';
-    let sortDir = -1; // -1 desc, 1 asc
+    let sortDir = -1;
 
     function normalize(str) {
       return (str || '').toString().toLowerCase();
@@ -728,7 +758,6 @@
       });
     }
 
-    // Sorting handlers
     document.querySelectorAll('th[data-sort]').forEach(th => {
       th.addEventListener('click', () => {
         const key = th.getAttribute('data-sort');
@@ -754,7 +783,6 @@
       applyFilters();
     });
 
-    // Initial render
     applyFilters();
   })();
   </script>
