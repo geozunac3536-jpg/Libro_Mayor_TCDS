@@ -1,1 +1,97 @@
+---
 
+## 4. JSON-LD maestro (`data/tcds_doi_index.jsonld`)
+
+Ahora el corazón para crawlers. Te dejo un **ejemplo funcional** con algunos DOIs reales tuyos y placeholders para el resto. Sólo tienes que ir replicando el patrón hasta tener los 44.
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "@id": "https://geozunac3536-jpg.github.io/TCDS_LibroMayor_DOI/",
+  "name": "TCDS — Libro Mayor DOI",
+  "creator": {
+    "@type": "Person",
+    "name": "Genaro Carrasco Ozuna",
+    "identifier": "https://orcid.org/0009-0005-6358-9910"
+  },
+  "description": "Índice maestro de preprints, datasets y software del Proyecto TCDS, organizado por rama de aplicación y conectado a DOIs trazables.",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "hasPart": [
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.5281/zenodo.17443586",
+      "name": "Teoría Cromodinámica Sincrónica (Canon Paradigmático)",
+      "description": "Núcleo teórico de la TCDS: Lagrangiano Σ–χ, Ley de Coherencia y marco Q–Σ–φ–χ.",
+      "creator": { "@id": "https://orcid.org/0009-0005-6358-9910" },
+      "keywords": [
+        "TCDS",
+        "Canon Paradigmático",
+        "Coherencia",
+        "Σ–χ",
+        "Empuje Cuántico"
+      ],
+      "about": [
+        "Núcleo Teórico",
+        "Física Teórica"
+      ],
+      "isPartOf": {
+        "@type": "CreativeWorkSeries",
+        "name": "Proyecto TCDS — Núcleo Teórico"
+      }
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://doi.org/10.5281/zenodo.17451385",
+      "name": "TCDS — Sistema Predictivo de Defensa Sísmica",
+      "description": "Software Q-driven para análisis Σ-metrics aplicado a series sísmicas y defensa sísmica.",
+      "creator": { "@id": "https://orcid.org/0009-0005-6358-9910" },
+      "programmingLanguage": "Python",
+      "keywords": [
+        "TCDS",
+        "Sismología",
+        "Σ-metrics",
+        "Predicción Sísmica"
+      ],
+      "about": [
+        "Sistema Predictivo",
+        "Defensa Sísmica",
+        "Aplicación Sismológica"
+      ],
+      "license": [
+        "https://creativecommons.org/licenses/by/4.0/",
+        "https://opensource.org/licenses/MIT"
+      ]
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.5281/zenodo.XXXXXXX",
+      "name": "Reloj Causal y Segundo Coherencial TCDS",
+      "description": "Estudio metrológico del tiempo causal t_C y el segundo coherencial TCDS.",
+      "creator": { "@id": "https://orcid.org/0009-0005-6358-9910" },
+      "keywords": [
+        "Reloj Causal",
+        "Segundo Coherencial",
+        "Metrología",
+        "TCDS"
+      ],
+      "about": [
+        "Hardware de Coherencia",
+        "Metrología del Tiempo"
+      ]
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.5281/zenodo.YYYYYYY",
+      "name": "CSL-H y coherencia de estados mentales",
+      "description": "Formalismo TCDS–CSL-H para describir coherencia en procesos mentales.",
+      "creator": { "@id": "https://orcid.org/0009-0005-6358-9910" },
+      "about": [
+        "CSL-H",
+        "Conciencia",
+        "Neurociencia Teórica"
+      ]
+    }
+    /* Añade aquí el resto de los ~44 registros con el mismo patrón */
+  ]
+}
