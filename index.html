@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>TCDS — Libro Mayor DOI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --bg: #05060a;
+      --bg-alt: #0c0f1a;
+      --card: #101321;
+      --accent: #00e0ff;
+      --accent-soft: #00bfa6;
+      --text: #e5e9ff;
+      --muted: #7c84a8;
+      --border: #20263a;
+      --danger: #ff4477;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #11172a 0, #05060a 55%, #020308 100%);
+      color: var(--text);
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .shell {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 24px;
+      align-items: center;
+      margin-bottom: 28px;
+    }
+    .hero-card {
+      background: linear-gradient(135deg, #12162b, #05060a);
+      border-radius: 18px;
+      padding: 20px 22px;
+      border: 1px solid rgba(0, 224, 255, 0.18);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.65);
+    }
+    .hero-title {
+      font-size: 1.6rem;
+      margin: 0 0 8px;
+    }
+    .hero-sub {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .hero-metrics {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+    .chip {
+      font-size: 0.8rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(124,132,168,0.5);
+      color: var(--muted);
+    }
+    .chip strong {
+      color: var(--accent-soft);
+      font-weight: 600;
+    }
+    .hero-image {
+      display: flex;
+      justify-content: center;
+    }
+    .hero-image-inner {
+      background: radial-gradient(circle at top, #18213a 0, #05060a 60%);
+      border-radius: 24px;
+      border: 1px solid rgba(0, 224, 255, 0.14);
+      padding: 10px;
+      width: 100%;
+      max-width: 360px;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.9);
+    }
+    .hero-image-inner img {
+      width: 100%;
+      display: block;
+      border-radius: 18px;
+    }
+
+    .toolbar {
+      margin: 10px 0 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .toolbar-left {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    .field {
+      position: relative;
+    }
+    .field input,
+    .field select {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 7px 12px;
+      color: var(--text);
+      font-size: 0.85rem;
+      outline: none;
+    }
+    .field input::placeholder {
+      color: var(--muted);
+    }
+    .pill {
+      font-size: 0.78rem;
+      padding: 5px 11px;
+      border-radius: 999px;
+      border: 1px solid rgba(0, 224, 255, 0.4);
+      color: var(--accent);
+      background: rgba(0, 224, 255, 0.08);
+      cursor: pointer;
+      transition: background 0.15s, transform 0.1s;
+    }
+    .pill:hover {
+      background: rgba(0, 224, 255, 0.16);
+      transform: translateY(-1px);
+    }
+
+    .card {
+      background: rgba(10, 12, 24, 0.96);
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.86rem;
+    }
+    thead {
+      background: rgba(10, 15, 36, 0.96);
+    }
+    th, td {
+      padding: 8px 10px;
+      text-align: left;
+      border-bottom: 1px solid rgba(22, 27, 48, 0.95);
+    }
+    th {
+      font-weight: 500;
+      color: var(--muted);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    th span.sort {
+      font-size: 0.7rem;
+      opacity: 0.5;
+      margin-left: 4px;
+    }
+    tbody tr:nth-child(even) {
+      background: #060816;
+    }
+    tbody tr:hover {
+      background: #0b0f22;
+    }
+    td.title-cell a {
+      font-weight: 500;
+    }
+    td.badge {
+      font-size: 0.72rem;
+      padding: 2px 7px;
+      border-radius: 999px;
+      border: 1px solid rgba(124,132,168,0.6);
+      color: var(--muted);
+    }
+    td.badge-soft {
+      border-color: rgba(0, 191, 166, 0.7);
+      color: var(--accent-soft);
+    }
+    .meta {
+      margin-top: 10px;
+      font-size: 0.76rem;
+      color: var(--muted);
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    @media (max-width: 800px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 600px) {
+      th:nth-child(4),
+      td:nth-child(4) {
+        display: none;
+      }
+    }
+  </style>
+
+  <!-- JSON data for interactive table -->
+  <script>
+    window.TCDS_DOIS = [];
+  </script>
+</head>
+<body>
+  <div class="shell">
+    <section class="hero">
+      <div class="hero-card">
+        <h1 class="hero-title">TCDS — Libro Mayor DOI</h1>
+        <p class="hero-sub">
+          Explorador interactivo de los trabajos del Proyecto TCDS consolidados vía DOI (Zenodo, etc.),
+          anclados al Reloj Causal y al marco Σ-metrics.
+        </p>
+        <div class="hero-metrics">
+          <div class="chip">Total de registros: <strong id="metric-total">–</strong></div>
+          <div class="chip">Con DOI trazable: <strong id="metric-doi">–</strong></div>
+          <div class="chip">Año más reciente: <strong id="metric-year">–</strong></div>
+        </div>
+        <div class="meta">
+          <span>Autor: <strong>Genaro Carrasco Ozuna</strong></span>
+          <span>ORCID: <a href="https://orcid.org/0009-0005-6358-9910" target="_blank">0009-0005-6358-9910</a></span>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="hero-image-inner">
+          <img src="assets/reloj_causal.svg" alt="Reloj Causal TCDS">
+        </div>
+      </div>
+    </section>
+
+    <section class="toolbar">
+      <div class="toolbar-left">
+        <div class="field">
+          <input id="search" type="search" placeholder="Buscar por título o DOI…">
+        </div>
+        <div class="field">
+          <select id="filter-type">
+            <option value="">Tipo: todos</option>
+            <option value="article">Artículo / Preprint</option>
+            <option value="misc">Misceláneo / Repo</option>
+          </select>
+        </div>
+        <div class="field">
+          <select id="filter-year">
+            <option value="">Año: todos</option>
+          </select>
+        </div>
+      </div>
+      <button class="pill" id="reset-filters">Limpiar filtros</button>
+    </section>
+
+    <section class="card">
+      <table>
+        <thead>
+          <tr>
+            <th data-sort="title">Título <span class="sort">↕</span></th>
+            <th data-sort="doi">DOI <span class="sort">↕</span></th>
+            <th data-sort="year">Año <span class="sort">↕</span></th>
+            <th data-sort="type">Tipo <span class="sort">↕</span></th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+          <!-- rows injected by JS -->
+        </tbody>
+      </table>
+    </section>
+
+    <div class="meta" style="margin-top: 12px;">
+      <span>Datos fuente: <code>data/tcds_doi_index.csv</code> y <code>data/tcds_doi_index.jsonld</code>.</span>
+      <span>Este panel es estático: sólo HTML + CSS + JS, listo para GitHub Pages.</span>
+    </div>
+  </div>
+
+  <script>
+  (function() {
+    const raw = [
+  {
+    "title": "TCDS F(\\sigma)",
+    "doi": null,
+    "year": "2025",
+    "type": "misc",
+    "url": null
+  },
+  {
+    "title": "3IATLAS",
+    "doi": "10.5281/ZENODO.17224905",
+    "year": "2025",
+    "type": "article",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17224905"
+  },
+  {
+    "title": "Paradigma FÍSICA",
+    "doi": "10.5281/ZENODO.17443586",
+    "year": "2025",
+    "type": "misc",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17443586"
+  },
+  {
+    "title": "Sistema predictivo de defensa Sísmica",
+    "doi": "10.5281/ZENODO.17451385",
+    "year": "2025",
+    "type": "misc",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17451385"
+  },
+  {
+    "title": "TCDS F(\\sigma)",
+    "doi": null,
+    "year": "2025",
+    "type": "misc",
+    "url": null
+  },
+  {
+    "title": "\"Reloj Causal TCDS y Segundo Coherencial Predictivo (SCP)\",",
+    "doi": "10.5281/ZENODO.17570393",
+    "year": "2025",
+    "type": "misc",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17570393"
+  },
+  {
+    "title": "3I ATLAS FRACTURA POR CHOQUE TÉRMICO",
+    "doi": "10.5281/ZENODO.17561711",
+    "year": "2025",
+    "type": "misc",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17561711"
+  },
+  {
+    "title": "COHERENCIA UNIVERSAL",
+    "doi": "10.5281/ZENODO.17458955",
+    "year": "",
+    "type": "misc",
+    "url": "http://doi.org/10.5281/zenodo.17458955"
+  },
+  {
+    "title": "CROMODINÁMICA Y PREDICCIONES  de 3I ATLAS",
+    "doi": "10.5281/ZENODO.17148573",
+    "year": "2025",
+    "type": "misc",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17148573"
+  },
+  {
+    "title": "Compendio de Investigaciónes TCDS",
+    "doi": "10.5281/ZENODO.17459148",
+    "year": "2025",
+    "type": "misc",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17459148"
+  },
+  {
+    "title": "El Pivote Metrológico TCDS: Del Tiempo Pasivo (t_M) al Segundo Coherencial Predictivo (t_C)",
+    "doi": "10.5281/ZENODO.17555261",
+    "year": "2025",
+    "type": "misc",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17555261"
+  },
+  {
+    "title": "Estudio científico TCDS — Estructura Σ–χ y validación multidominio",
+    "doi": "10.5281/ZENODO.17469327",
+    "year": "2025",
+    "type": "misc",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17469327"
+  },
+  {
+    "title": "Estudio de la Conciencia",
+    "doi": "10.5281/ZENODO.17498171",
+    "year": "2025",
+    "type": "misc",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17498171"
+  },
+  {
+    "title": "Evento Cero TCDS — Índice t_C Puebla–Morelos (2017)",
+    "doi": "10.5281/ZENODO.17606032",
+    "year": "2025",
+    "type": "misc",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17606032"
+  },
+  {
+    "title": "Evento Cero TCDS — Índice t_C Regional del Sismo M7.1 Puebla–Morelos (2017): Implementación Operacional en Termux–Android",
+    "doi": "10.5281/ZENODO.17605698",
+    "year": "2025",
+    "type": "misc",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17605698"
+  },
+  {
+    "title": "Experimentacion y valodacion de SIMBIOSIS HUMANO IA",
+    "doi": "10.5281/ZENODO.17462750",
+    "year": "2025",
+    "type": "misc",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17462750"
+  },
+  {
+    "title": "La Mente",
+    "doi": "10.5281/ZENODO.17584200",
+    "year": "2025",
+    "type": "misc",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17584200"
+  },
+  {
+    "title": "MENTE TCDS",
+    "doi": "10.5281/ZENODO.17584492",
+    "year": "2025",
+    "type": "misc",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17584492"
+  },
+  {
+    "title": "Paquete de estudio TCDS sobre La Mente",
+    "doi": "10.5281/ZENODO.17584450",
+    "year": "2025",
+    "type": "misc",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17584450"
+  },
+  {
+    "title": "Predicciones espectroscópicas y composición del objeto interestelar 3I/ATLAS",
+    "doi": "10.5281/ZENODO.17562117",
+    "year": "2025",
+    "type": "misc",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17562117"
+  },
+  {
+    "title": "Presentacion de \"LA TEORÍA CROMODINÁMICA SINCRÓNICA\"",
+    "doi": "10.5281/ZENODO.17504243",
+    "year": "2025",
+    "type": "misc",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17504243"
+  },
+  {
+    "title": "Puentes Físicos",
+    "doi": "10.5281/ZENODO.17510316",
+    "year": "2025",
+    "type": "misc",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17510316"
+  },
+  {
+    "title": "SigmaFET\\_TCDS",
+    "doi": "10.5281/ZENODO.17458693",
+    "year": "",
+    "type": "misc",
+    "url": "http://doi.org/10.5281/zenodo.17458693"
+  },
+  {
+    "title": "Sistema predictivo de defensa Sísmica",
+    "doi": "10.5281/ZENODO.17451373",
+    "year": "2025",
+    "type": "misc",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17451373"
+  },
+  {
+    "title": "Sistema predictivo de defensa Sísmica",
+    "doi": "10.5281/ZENODO.17451453",
+    "year": "2025",
+    "type": "misc",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17451453"
+  },
+  {
+    "title": "Sistema predictivo de defensa Sísmica",
+    "doi": "10.5281/ZENODO.17452020",
+    "year": "2025",
+    "type": "misc",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17452020"
+  },
+  {
+    "title": "Sistema predictivo de defensa Sísmica 2.1",
+    "doi": "10.5281/ZENODO.17505340",
+    "year": "2025",
+    "type": "misc",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17505340"
+  },
+  {
+    "title": "TCDS 31 ATLAS PREDICCION",
+    "doi": "10.5281/ZENODO.17560070",
+    "year": "2025",
+    "type": "misc",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17560070"
+  },
+  {
+    "title": "TCDS 3I ATLAS VALIDACION 2025",
+    "doi": "10.5281/ZENODO.17555759",
+    "year": "2025",
+    "type": "misc",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17555759"
+  },
+  {
+    "title": "TCDS \\textemdash M{\\'e}tricas y Protocolos Can{\\'o}nicos",
+    "doi": "10.5281/ZENODO.17458809",
+    "year": "",
+    "type": "misc",
+    "url": "http://doi.org/10.5281/zenodo.17458809"
+  },
+  {
+    "title": "TCDS — Sistema Predictivo Sísmico Σ-Predictivo: Validación Empírica del Campo de Coherencia en la Tierra",
+    "doi": "10.5281/ZENODO.17507622",
+    "year": "2025",
+    "type": "misc",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17507622"
+  },
+  {
+    "title": "TCDS-LICENCIAS: Licencias del Proyecto TCDS",
+    "doi": "10.5281/ZENODO.17498200",
+    "year": "2025",
+    "type": "misc",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17498200"
+  },
+  {
+    "title": "TCDS-Σ Business Plan & Dossier (Dual License, GA4, Web Vitals)",
+    "doi": "10.5281/ZENODO.17494368",
+    "year": "2025",
+    "type": "article",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17494368"
+  },
+  {
+    "title": "TCDS-Σ Business Plan & Dossier (Dual License, GA4, Web Vitals)",
+    "doi": "10.5281/ZENODO.17494318",
+    "year": "2025",
+    "type": "article",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17494318"
+  },
+  {
+    "title": "TCDS_GOOGLE_SMETRICS",
+    "doi": "10.5281/ZENODO.17470632",
+    "year": "2025",
+    "type": "misc",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17470632"
+  },
+  {
+    "title": "TCDS_Gradiente_Economico",
+    "doi": "10.5281/ZENODO.17491112",
+    "year": "2025",
+    "type": "misc",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17491112"
+  },
+  {
+    "title": "Teoría TCDS",
+    "doi": "10.5281/ZENODO.17505875",
+    "year": "2025",
+    "type": "misc",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17505875"
+  },
+  {
+    "title": "geozunac3536-jpg/3I_ATLAS_TCDS_arXiv_ready: Predicción Post Perihelio 3I ATLAS",
+    "doi": "10.5281/ZENODO.17560150",
+    "year": "2025",
+    "type": "misc",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17560150"
+  },
+  {
+    "title": "geozunac3536-jpg/LBCU: TCDS v1.0.0: Teoría Operacional y Compendio Inicial",
+    "doi": "10.5281/ZENODO.17462568",
+    "year": "2025",
+    "type": "misc",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17462568"
+  },
+  {
+    "title": "geozunac3536-jpg/Proyecto_TCDS: 🧭 TCDS — Núcleo Teórico y Auditoría Trazable (v1.0.0)",
+    "doi": "10.5281/ZENODO.17504507",
+    "year": "2025",
+    "type": "misc",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17504507"
+  },
+  {
+    "title": "geozunac3536-jpg/TCDS-NODO: Paradigma falsable de coherencia universal derivado del marco TCDS",
+    "doi": "10.5281/ZENODO.17463045",
+    "year": "2025",
+    "type": "misc",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17463045"
+  },
+  {
+    "title": "geozunac3536-jpg/TCDS-Portal-de-Documentos: Portal de Documentos e investigaciones TCDS",
+    "doi": "10.5281/ZENODO.17450327",
+    "year": "2025",
+    "type": "misc",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17450327"
+  },
+  {
+    "title": "geozunac3536-jpg/TCDS-SISTEMA-PREDICTIVO: Cromodinámicasincrónica",
+    "doi": "10.5281/ZENODO.17452046",
+    "year": "2025",
+    "type": "misc",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17452046"
+  },
+  {
+    "title": "geozunac3536-jpg/TCDS-SISTEMA-PREDICTIVO: TCDS v1.0.0: Teoría Operacional y Compendio Inicial",
+    "doi": "10.5281/ZENODO.17463490",
+    "year": "2025",
+    "type": "misc",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17463490"
+  },
+  {
+    "title": "geozunac3536-jpg/TCDS-Teoria-Operacional: TCDS v1.0.0: Teoría Operacional y Compendio Inicial",
+    "doi": "10.5281/ZENODO.17460101",
+    "year": "2025",
+    "type": "misc",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17460101"
+  },
+  {
+    "title": "geozunac3536-jpg/TCDS-Teoria-Operacional: TCDS v1.0.0: Teoría Operacional y Compendio Inicial",
+    "doi": "10.5281/ZENODO.17460891",
+    "year": "2025",
+    "type": "misc",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17460891"
+  },
+  {
+    "title": "geozunac3536-jpg/TCDS-UNIFICADO: Cromodinámicasincrónica",
+    "doi": "10.5281/ZENODO.17450317",
+    "year": "2025",
+    "type": "misc",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17450317"
+  },
+  {
+    "title": "geozunac3536-jpg/TCDS-UNIFICADO: TCDS v1.0.0: Teoría Operacional y Compendio Inicial",
+    "doi": "10.5281/ZENODO.17462595",
+    "year": "2025",
+    "type": "misc",
+    "url": "https://zenodo.org/doi/10.5281/zenodo.17462595"
+  }
+];
+
+    window.TCDS_DOIS = raw;
+
+    const tbody = document.getElementById('tbody');
+    const searchInput = document.getElementById('search');
+    const filterType = document.getElementById('filter-type');
+    const filterYear = document.getElementById('filter-year');
+    const resetBtn = document.getElementById('reset-filters');
+
+    // Populate year filter
+    const years = Array.from(new Set(raw.map(r => r.year).filter(Boolean))).sort();
+    years.forEach(y => {
+      const opt = document.createElement('option');
+      opt.value = y;
+      opt.textContent = y;
+      filterYear.appendChild(opt);
+    });
+
+    // Metrics
+    document.getElementById('metric-total').textContent = raw.length;
+    document.getElementById('metric-doi').textContent = raw.filter(r => r.doi).length;
+    const maxYear = years[years.length - 1] || '—';
+    document.getElementById('metric-year').textContent = maxYear;
+
+    let sortKey = 'year';
+    let sortDir = -1; // -1 desc, 1 asc
+
+    function normalize(str) {
+      return (str || '').toString().toLowerCase();
+    }
+
+    function applyFilters() {
+      const q = normalize(searchInput.value);
+      const t = filterType.value;
+      const y = filterYear.value;
+
+      let rows = raw.slice();
+
+      if (q) {
+        rows = rows.filter(r =>
+          normalize(r.title).includes(q) ||
+          normalize(r.doi).includes(q)
+        );
+      }
+      if (t) {
+        rows = rows.filter(r => r.type === t);
+      }
+      if (y) {
+        rows = rows.filter(r => (r.year || '') === y);
+      }
+
+      rows.sort((a, b) => {
+        const va = (a[sortKey] || '').toString();
+        const vb = (b[sortKey] || '').toString();
+        if (va < vb) return -1 * sortDir;
+        if (va > vb) return  1 * sortDir;
+        return 0;
+      });
+
+      render(rows);
+    }
+
+    function render(rows) {
+      tbody.innerHTML = '';
+      rows.forEach(r => {
+        const tr = document.createElement('tr');
+
+        const tdTitle = document.createElement('td');
+        tdTitle.className = 'title-cell';
+        if (r.url) {
+          const a = document.createElement('a');
+          a.href = r.url;
+          a.target = '_blank';
+          a.textContent = r.title;
+          tdTitle.appendChild(a);
+        } else {
+          tdTitle.textContent = r.title;
+        }
+
+        const tdDoi = document.createElement('td');
+        if (r.doi) {
+          const a = document.createElement('a');
+          a.href = 'https://doi.org/' + r.doi;
+          a.target = '_blank';
+          a.textContent = r.doi;
+          tdDoi.appendChild(a);
+        } else {
+          tdDoi.textContent = '—';
+        }
+
+        const tdYear = document.createElement('td');
+        tdYear.textContent = r.year || '—';
+
+        const tdType = document.createElement('td');
+        tdType.className = 'badge' + (r.type === 'article' ? ' badge-soft' : '');
+        tdType.textContent = r.type || '—';
+
+        tr.appendChild(tdTitle);
+        tr.appendChild(tdDoi);
+        tr.appendChild(tdYear);
+        tr.appendChild(tdType);
+
+        tbody.appendChild(tr);
+      });
+    }
+
+    // Sorting handlers
+    document.querySelectorAll('th[data-sort]').forEach(th => {
+      th.addEventListener('click', () => {
+        const key = th.getAttribute('data-sort');
+        if (sortKey === key) {
+          sortDir *= -1;
+        } else {
+          sortKey = key;
+          sortDir = key === 'year' ? -1 : 1;
+        }
+        applyFilters();
+      });
+    });
+
+    searchInput.addEventListener('input', () => applyFilters());
+    filterType.addEventListener('change', () => applyFilters());
+    filterYear.addEventListener('change', () => applyFilters());
+    resetBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      filterType.value = '';
+      filterYear.value = '';
+      sortKey = 'year';
+      sortDir = -1;
+      applyFilters();
+    });
+
+    // Initial render
+    applyFilters();
+  })();
+  </script>
+</body>
+</html>
