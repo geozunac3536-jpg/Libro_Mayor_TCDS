@@ -1,0 +1,25 @@
+<svg width="600" height="320" viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="600" height="320" fill="#05060a"/>
+  <circle cx="300" cy="160" r="110" fill="#05060a" stroke="#00e0ff" stroke-width="2"/>
+  <circle cx="300" cy="160" r="80" fill="none" stroke="#00ff88" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <line x1="300" y1="60" x2="300" y2="260" stroke="#8888ff" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <text x="310" y="75" fill="#8888ff" font-size="11" font-family="monospace">t_M</text>
+  <line x1="300" y1="160" x2="360" y2="110" stroke="#00ff88" stroke-width="3"/>
+  <polygon points="360,110 352,112 356,118" fill="#00ff88"/>
+  <text x="365" y="105" fill="#00ff88" font-size="11" font-family="monospace">t_C = dΣ/dt</text>
+  <circle cx="300" cy="160" r="4" fill="#ffffff"/>
+  <circle cx="360" cy="110" r="4" fill="#00ff88"/>
+  <text x="230" y="150" fill="#00e0ff" font-size="12" font-family="monospace">Σ</text>
+  <text x="265" y="205" fill="#ffaa33" font-size="12" font-family="monospace">Q</text>
+  <text x="330" y="210" fill="#ff4477" font-size="12" font-family="monospace">φ</text>
+  <rect x="170" y="235" width="260" height="30" rx="6" ry="6" fill="#0a0c16" stroke="#222a3a" stroke-width="1"/>
+  <text x="185" y="255" fill="#e0e6ff" font-size="13" font-family="monospace">
+    Q · Σ = φ   →   balance coherencial
+  </text>
+  <text x="300" y="35" fill="#e0e6ff" font-size="16" font-family="sans-serif" text-anchor="middle">
+    Reloj Causal TCDS
+  </text>
+  <text x="300" y="52" fill="#7f8cff" font-size="11" font-family="monospace" text-anchor="middle">
+    Segundo Coherencial · Σ-metrics · E-Veto
+  </text>
+</svg>
