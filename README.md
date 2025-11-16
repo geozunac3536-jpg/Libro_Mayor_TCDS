@@ -25,7 +25,60 @@ t_C = \frac{d\Sigma}{dt} \; \text{(Tiempo Causal, Q-driven)}
 \]
 
 Cada obra registrada se interpreta como un módulo del **Reloj Causal**: teoría, hardware de coherencia, sistema predictivo sísmico, CSL-H, IA y gradiente económico.
+## 🧾 Registro de Usuarios TCDS
 
+Para que el impacto del Proyecto TCDS sea **medible y auditable**, invitamos a quienes usan este corpus (artículos, software, hardware experimental) a registrarse como usuarios.
+
+El objetivo del registro es:
+
+- Mantener un **libro mayor auditable** de personas e instituciones que usan TCDS.
+- Distinguir por **rama de aplicación** (sismología, ΣFET, CSL-H, IA, etc.).
+- Correlacionar, a futuro, el uso del corpus con métricas Σ (LI, R, ΔH, κΣ).
+
+### 1️⃣ Registro básico (formulario)
+
+Si quieres registrarte como usuario TCDS, usa este formulario:
+
+👉 **[Formulario de registro de usuarios TCDS](https://forms.gle/TU_LINK_DE_FORMULARIO)**
+
+> Campos sugeridos:
+> - Nombre o alias público  
+> - Email de contacto  
+> - País  
+> - Rol principal (Investigador, Maker, Lector, Institución, etc.)  
+> - ORCID (si aplica)  
+> - Rama de TCDS que más utilizas  
+> - Confirmación de lectura y aceptación de las licencias TCDS  
+> - Descripción breve de cómo usarás TCDS  
+
+Periódicamente, las respuestas se consolidan en archivos CSV y se integran como datasets auditables dentro de este mismo Libro Mayor (por ejemplo en `data/registro_usuarios/` y, eventualmente, con DOI propio en Zenodo).
+
+### 2️⃣ Registro avanzado (usuarios técnicos vía GitHub)
+
+Para usuarios técnicos (desarrolladores, investigadores, laboratorios), también puedes registrarte creando un issue en este repositorio:
+
+👉 **[Abrir un issue de “Registro de Usuario TCDS”](../../issues/new/choose)**
+
+El issue template (tipo `Registro de Usuario TCDS`) te pedirá información como:
+
+- Nombre o alias  
+- ORCID  
+- Rama principal de uso (Núcleo Teórico, Sistema Predictivo Sísmico, ΣFET/Reloj Causal, CSL-H, Gradiente Económico, etc.)  
+- Breve descripción de tu uso de TCDS  
+
+Cada issue:
+
+- Lleva timestamp,
+- Queda público y versionado,
+- Y forma parte del **registro auditable** de la comunidad TCDS.
+
+### 3️⃣ Soporte al proyecto
+
+Si además de registrarte quieres apoyar el desarrollo del Proyecto TCDS:
+
+☕ **Ko-fi:** [https://ko-fi.com/genarocarrasco](https://ko-fi.com/genarocarrasco)  
+
+Tu apoyo ayuda a sostener la evolución del corpus (nuevos estudios, datasets, software y hardware de coherencia) y a mantener un marco auditable y abierto para la comunidad.
 ---
 
 ## 🔗 Explorador interactivo de DOIs
