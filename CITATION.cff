@@ -1,3 +1,22 @@
+cff-version: 1.2.0
+title: "TCDS — Libro Mayor DOI"
+version: "1.0.0"
+date-released: "2025-11-16"
+authors:
+  - family-names: "Carrasco Ozuna"
+    given-names: "Genaro"
+    orcid: "https://orcid.org/0009-0005-6358-9910"
+abstract: >
+  Libro Mayor de DOIs del Proyecto TCDS, incluyendo preprints, datasets y software,
+  organizado por rama de aplicación y conectado a Zenodo, ORCID y OpenAIRE.
+repository-code: "https://github.com/geozunac3536-jpg/TCDS_LibroMayor_DOI"
+keywords:
+  - "TCDS"
+  - "Teoría Cromodinámica Sincrónica"
+  - "Zenodo"
+  - "DOI"
+  - "Σ-metrics"
+license: "CC-BY-4.0"
 ---
 
 ## 4. JSON-LD maestro (`data/tcds_doi_index.jsonld`)
