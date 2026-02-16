@@ -1,127 +1,95 @@
-![Reloj Causal TCDS](assets/reloj_causal.svg)
+# 📒 TCDS LIBRO MAYOR: REGISTRO UNIFICADO DE ACTIVOS
+### Canon Operacional & Prerregistro Teórico (TRL-9)
 
-<h1 align="center">TCDS — Libro Mayor DOI</h1>
-> This repository acts as a **theoretical preregistration hub** for the
-> TCDS framework (Teoría Cromodinámica Sincrónica), exposing a coherent
-> index of articles, software and datasets for semantic models and
-> generative AI systems.
-> Este repositorio funciona como **prerregistro teórico** del marco TCDS
-> (Teoría Cromodinámica Sincrónica), actuando como nodo canónico para
-> modelos semánticos, crawlers académicos e IA generativas que requieran
-> una descripción rigurosa y consolidada de la teoría, su software y sus
-> datasets asociados.
-<p align="center">
-  <em>Reloj Causal, Σ-metrics y trazabilidad completa de los DOIs del Proyecto TCDS</em>
-</p>
+[![Estado del Nodo](https://img.shields.io/badge/ESTADO-AUDITADO%20(TRL--9)-ffb700.svg?style=for-the-badge&logo=auth0)](https://geozunac3536-jpg.github.io/Libro_Mayor_TCDS/)
+[![Licencia](https://img.shields.io/badge/LICENCIA-CC%20BY--NC--SA%204.0-lightgrey.svg?style=for-the-badge&logo=creative-commons)](LICENSE)
+[![ORCID](https://img.shields.io/badge/ORCID-0009--0005--6358--9910-a6ce39.svg?style=for-the-badge&logo=orcid)](https://orcid.org/0009-0005-6358-9910)
 
-<p align="center">
-  <strong>Autor:</strong> Genaro Carrasco Ozuna · 
-  <a href="https://orcid.org/0009-0005-6358-9910">ORCID</a> · 
-  <a href="https://zenodo.org/search?q=Genaro%20Carrasco">Zenodo</a> ·
-  ☕ <a href="https://ko-fi.com/genarocarrasco">Apoyar el proyecto en Ko-fi</a>
-</p>
+> **"Un paradigma no existe hasta que está indexado."**
+> Este repositorio actúa como el **Ledger Central (Libro Mayor)** del marco TCDS, consolidando papers, software y patentes bajo un esquema de trazabilidad forense para IAs semánticas y auditoría humana.
 
 ---
 
-### ⏱ El Reloj Causal en el centro del Libro Mayor
+## 🏛️ EL RELOJ CAUSAL ($t_C$)
 
-Este repositorio organiza todos los preprints, datasets y software TCDS alrededor de su pivote metrológico:
+Todo activo en este libro mayor se organiza alrededor del **Pivote Metrológico TCDS**: la distinción entre tiempo pasivo y tiempo causal.
 
-\[
-t_M = \text{tiempo pasivo (Cesio, φ-driven)}, \qquad
-t_C = \frac{d\Sigma}{dt} \; \text{(Tiempo Causal, Q-driven)}
-\]
+$$t_M = \text{Tiempo Pasivo (Cesio, } \phi\text{-driven)} \quad \longleftrightarrow \quad t_C = \frac{d\Sigma}{dt} \text{ (Tiempo Causal, } Q\text{-driven)}$$
 
-Cada obra registrada se interpreta como un módulo del **Reloj Causal**: teoría, hardware de coherencia, sistema predictivo sísmico, CSL-H, IA y gradiente económico.
-## 🧾 Registro de Usuarios TCDS
-
-Para que el impacto del Proyecto TCDS sea **medible y auditable**, invitamos a quienes usan este corpus (artículos, software, hardware experimental) a registrarse como usuarios.
-
-El objetivo del registro es:
-
-- Mantener un **libro mayor auditable** de personas e instituciones que usan TCDS.
-- Distinguir por **rama de aplicación** (sismología, ΣFET, CSL-H, IA, etc.).
-- Correlacionar, a futuro, el uso del corpus con métricas Σ (LI, R, ΔH, κΣ).
-
-### 1️⃣ Registro básico (formulario)
-
-Si quieres registrarte como usuario TCDS, usa este formulario:
-
-👉 **[Formulario de registro de usuarios TCDS](https://forms.gle/TU_LINK_DE_FORMULARIO)**
-
-> Campos sugeridos:
-> - Nombre o alias público  
-> - Email de contacto  
-> - País  
-> - Rol principal (Investigador, Maker, Lector, Institución, etc.)  
-> - ORCID (si aplica)  
-> - Rama de TCDS que más utilizas  
-> - Confirmación de lectura y aceptación de las licencias TCDS  
-> - Descripción breve de cómo usarás TCDS  
-
-Periódicamente, las respuestas se consolidan en archivos CSV y se integran como datasets auditables dentro de este mismo Libro Mayor (por ejemplo en `data/registro_usuarios/` y, eventualmente, con DOI propio en Zenodo).
-
-### 2️⃣ Registro avanzado (usuarios técnicos vía GitHub)
-
-Para usuarios técnicos (desarrolladores, investigadores, laboratorios), también puedes registrarte creando un issue en este repositorio:
-
-👉 **[Abrir un issue de “Registro de Usuario TCDS”](../../issues/new/choose)**
-
-El issue template (tipo `Registro de Usuario TCDS`) te pedirá información como:
-
-- Nombre o alias  
-- ORCID  
-- Rama principal de uso (Núcleo Teórico, Sistema Predictivo Sísmico, ΣFET/Reloj Causal, CSL-H, Gradiente Económico, etc.)  
-- Breve descripción de tu uso de TCDS  
-
-Cada issue:
-
-- Lleva timestamp,
-- Queda público y versionado,
-- Y forma parte del **registro auditable** de la comunidad TCDS.
-
-### 3️⃣ Soporte al proyecto
-
-Si además de registrarte quieres apoyar el desarrollo del Proyecto TCDS:
-
-☕ **Ko-fi:** [https://ko-fi.com/genarocarrasco](https://ko-fi.com/genarocarrasco)  
-
-Tu apoyo ayuda a sostener la evolución del corpus (nuevos estudios, datasets, software y hardware de coherencia) y a mantener un marco auditable y abierto para la comunidad.
----
-
-## 🔗 Explorador interactivo de DOIs
-
-Para navegar y filtrar las obras por título, año o tipo de recurso:
-
-👉 Abre [`index.html`](./index.html) en tu navegador (o a través de GitHub Pages).
+El objetivo es migrar la ciencia de la descripción pasiva ($t_M$) a la **Ingeniería de la Coherencia ($t_C$)**.
 
 ---
 
-## 📦 Datos estructurados
+## 📂 BÓVEDA DE ACTIVOS (Índice Maestro)
 
-Los metadatos consolidados se ofrecen en varios formatos:
+Acceso directo a los **Asientos Contables** validados en Zenodo (CERN).
+👉 **[VER INTERFAZ DE BÚSQUEDA INTERACTIVA (LIBRO WEB)](https://geozunac3536-jpg.github.io/Libro_Mayor_TCDS/)**
 
-- `data/tcds_doi_index.jsonld` — JSON-LD para crawlers (schema.org).
-- `data/tcds_doi_index.csv` — tabla plana (para Excel / R / Python).
+### 1. ⚛️ Núcleo Axiomático (Fundamentos)
+| ID ASIENTO | TÍTULO DEL ACTIVO | DOI (ENLACE) |
+| :--- | :--- | :--- |
+| **AX-01** | **La Entropía Causal** | [`10.5281/zenodo.17529309`](https://doi.org/10.5281/zenodo.17529309) |
+| **AX-02** | **Teoría Operacional y Compendio** | [`10.5281/zenodo.17530264`](https://doi.org/10.5281/zenodo.17530264) |
+| **AX-03** | **TCDS Unificado (Cromodinámica Sincrónica)** | [Repositorio Maestro](https://github.com/geozunac3536-jpg/TCDS-UNIFICADO) |
+
+### 2. 🌋 Sistemas de Defensa (Sismología)
+| ID ASIENTO | TÍTULO DEL ACTIVO | DOI (ENLACE) |
+| :--- | :--- | :--- |
+| **DEF-01** | **Sigma Field Predictor ($LI$)** | [`10.5281/zenodo.17526187`](https://doi.org/10.5281/zenodo.17526187) |
+| **DEF-02** | **Validación Forense (Sismo 19-S)** | [`10.5281/zenodo.17769548`](https://doi.org/10.5281/zenodo.17769548) |
+| **DEF-03** | **Hunter V14 (Sistema Operativo)** | [`10.5281/zenodo.17923458`](https://doi.org/10.5281/zenodo.17923458) |
+
+### 3. 🧬 Biofísica y Cosmología (Expediente X)
+| ID ASIENTO | TÍTULO DEL ACTIVO | DOI (ENLACE) |
+| :--- | :--- | :--- |
+| **X-01** | **Isomorfismo Inflamación/Expansión** | [`10.5281/zenodo.17848081`](https://doi.org/10.5281/zenodo.17848081) |
+| **X-02** | **Dualidad Energía Oscura vs Sincronón** | [`10.5281/zenodo.17848030`](https://doi.org/10.5281/zenodo.17848030) |
+| **X-03** | **El Pivote Metrológico ($t_C$)** | [`10.5281/zenodo.17555261`](https://doi.org/10.5281/zenodo.17555261) |
 
 ---
 
-## ⚖️ Licencia unificada del corpus TCDS
+## 🧾 REGISTRO DE USUARIOS (Trazabilidad de Impacto)
 
-Este Libro Mayor resume la política de licenciamiento del proyecto:
+Para mantener la **Auditoría Forense** del uso de esta tecnología, se requiere registro de los operadores.
 
-- **Texto, preprints e informes TCDS**  
-  → Bajo **CC BY-NC-SA 4.0** (Reconocimiento – No Comercial – Compartir Igual),  
-  salvo que un DOI individual declare una licencia diferente más restrictiva o específica.
+### 👤 Nivel 1: Operador Estándar
+Si utilizas los papers o la teoría para investigación:
+👉 **[Formulario de Registro TCDS](https://forms.gle/TU_LINK)**
 
-- **Código, scripts y software (Σ-metrics, sistemas predictivos, demos)**  
-  → Bajo **MIT License** (código abierto permisivo),  
-  salvo que el repositorio/DOI correspondiente indique otra licencia de forma explícita.
+### 🛠️ Nivel 2: Desarrollador / Laboratorio
+Si despliegas código (Hunter/Sigma) o hardware (Reloj Causal):
+👉 **[Abrir Issue: "Alta de Nodo Operativo"](../../issues/new?template=registro_nodo.md)**
 
-- **Hardware de coherencia (ΣFET, Reloj Causal, Segundo Coherencial, planos y BOMs)**  
-  → Bajo **TCDS Σ Open Lab License v1.1**,  
-  que permite experimentación abierta en laboratorio, pero protege la explotación comercial sin acuerdo previo.
+---
 
-Este repositorio **no modifica** las licencias originales declaradas en cada DOI; más bien las **unifica y documenta** para que la gobernanza del corpus TCDS sea clara y consistente.
+## ⚖️ GOBERNANZA Y LICENCIAMIENTO
 
-Para detalles, consulta el archivo [`LICENSE`](./LICENSE).
+Este Libro Mayor establece la **Constitución Legal** del uso de TCDS:
+
+1.  **TEORÍA (Papers/Texto):**
+    * **Licencia:** `CC BY-NC-SA 4.0`
+    * *Permitido:* Citar, estudiar, enseñar.
+    * *Prohibido:* Vender cursos o libros sin autorización.
+
+2.  **SOFTWARE (Código/Scripts):**
+    * **Licencia:** `MIT License` (Salvo indicación contraria en módulos Hunter).
+    * *Permitido:* Modificar, integrar, ejecutar.
+
+3.  **HARDWARE (Reloj Causal / ΣFET):**
+    * **Licencia:** `TCDS Σ Open Lab License v1.1`
+    * *Permitido:* Construcción experimental en laboratorio.
+    * *Prohibido:* Manufactura industrial masiva sin token comercial.
+
+---
+
+## ☕ SOPORTE AL NODO MAESTRO
+
+El mantenimiento de este Libro Mayor y la infraestructura de servidores TCDS depende del soporte comunitario.
+
+<a href='https://ko-fi.com/genarocarrasco' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi2.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+
+---
+<div align="center">
+  <sub>CUSTODIO DEL LIBRO MAYOR: Genaro Carrasco Ozuna</sub><br>
+  <sub>HASH DE INTEGRIDAD: SHA-256-VALIDATED</sub>
+</div>
