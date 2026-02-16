@@ -15,156 +15,51 @@
             --bg: #050505;
             --card-bg: #0a0a0a;
             --border: #333;
-            --accent-gold: #ffb700; /* Color "Oro" para el Libro Mayor */
+            --accent-gold: #ffb700;
             --text-main: #e0e0e0;
             --text-dim: #666;
             --font-head: 'Inter', sans-serif;
             --font-mono: 'IBM Plex Mono', monospace;
         }
 
-        body {
-            font-family: var(--font-mono);
-            background-color: var(--bg);
-            color: var(--text-main);
-            margin: 0;
-            padding: 40px 20px;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
+        body { font-family: var(--font-mono); background-color: var(--bg); color: var(--text-main); margin: 0; padding: 40px 20px; max-width: 1400px; margin: 0 auto; }
 
         /* HEADER */
-        header {
-            border-bottom: 2px solid var(--accent-gold);
-            padding-bottom: 20px;
-            margin-bottom: 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        h1 {
-            font-family: var(--font-head);
-            font-weight: 900;
-            font-size: 2.5rem;
-            margin: 0;
-            color: var(--accent-gold);
-            letter-spacing: -1px;
-            text-transform: uppercase;
-        }
-
-        .meta-info {
-            font-size: 0.8rem;
-            color: var(--text-dim);
-            text-align: right;
-        }
+        header { border-bottom: 2px solid var(--accent-gold); padding-bottom: 20px; margin-bottom: 40px; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px; }
+        h1 { font-family: var(--font-head); font-weight: 900; font-size: 2.5rem; margin: 0; color: var(--accent-gold); letter-spacing: -1px; text-transform: uppercase; }
+        .meta-info { font-size: 0.8rem; color: var(--text-dim); text-align: right; }
 
         /* SEARCH BAR */
-        .search-wrapper {
-            position: sticky;
-            top: 20px;
-            z-index: 100;
-            margin-bottom: 40px;
-            background: rgba(5, 5, 5, 0.8);
-            backdrop-filter: blur(10px);
-            padding: 10px 0;
-        }
+        .search-wrapper { position: sticky; top: 20px; z-index: 100; margin-bottom: 40px; background: rgba(5, 5, 5, 0.9); backdrop-filter: blur(10px); padding: 10px 0; border-bottom: 1px solid #222; }
+        #searchInput { width: 100%; padding: 15px; background: #111; border: 1px solid var(--border); color: var(--accent-gold); font-family: var(--font-mono); font-size: 1rem; box-sizing: border-box; }
+        #searchInput:focus { outline: none; border-color: var(--accent-gold); box-shadow: 0 0 15px rgba(255, 183, 0, 0.1); }
 
-        #searchInput {
-            width: 100%;
-            padding: 15px;
-            background: #111;
-            border: 1px solid var(--border);
-            color: var(--accent-gold);
-            font-family: var(--font-mono);
-            font-size: 1rem;
-            box-sizing: border-box;
-        }
+        /* SECTIONS */
+        .section-header { margin-top: 60px; margin-bottom: 20px; border-bottom: 1px solid #222; padding-bottom: 5px; color: var(--text-dim); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; }
 
-        #searchInput:focus {
-            outline: none;
-            border-color: var(--accent-gold);
-            box-shadow: 0 0 15px rgba(255, 183, 0, 0.1);
-        }
+        /* GRID */
+        .ledger-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+        
+        .entry { background: var(--card-bg); padding: 20px; display: flex; flex-direction: column; gap: 10px; transition: background 0.2s; position: relative; }
+        .entry:hover { background: #151515; }
 
-        /* DATA TABLE / GRID */
-        .ledger-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-            gap: 1px;
-            background: var(--border); /* Líneas de la grilla */
-            border: 1px solid var(--border);
-        }
-
-        .entry {
-            background: var(--card-bg);
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            transition: background 0.2s;
-        }
-
-        .entry:hover {
-            background: #151515;
-        }
-
-        .entry-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px dashed #333;
-            padding-bottom: 10px;
-            margin-bottom: 5px;
-        }
-
-        .type-tag {
-            font-size: 0.7rem;
-            padding: 2px 6px;
-            background: #222;
-            color: #888;
-            border: 1px solid #444;
-            text-transform: uppercase;
-        }
-
+        .entry-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed #333; padding-bottom: 10px; margin-bottom: 5px; }
+        
+        .type-tag { font-size: 0.7rem; padding: 2px 6px; background: #222; color: #888; border: 1px solid #444; text-transform: uppercase; }
         .type-tag.core { color: var(--accent-gold); border-color: rgba(255, 183, 0, 0.3); }
         .type-tag.seismic { color: #00f0ff; border-color: rgba(0, 240, 255, 0.3); }
+        .type-tag.bio { color: #00ff9d; border-color: rgba(0, 255, 157, 0.3); }
+        .type-tag.cosmos { color: #bd34fe; border-color: rgba(189, 52, 254, 0.3); }
+        .type-tag.tech { color: #ff5e00; border-color: rgba(255, 94, 0, 0.3); }
 
-        .entry h2 {
-            font-family: var(--font-head);
-            font-size: 1.1rem;
-            margin: 0;
-            color: #fff;
-            line-height: 1.4;
-        }
+        .entry h2 { font-family: var(--font-head); font-size: 1rem; margin: 0; color: #fff; line-height: 1.4; font-weight: 600; }
+        
+        .doi-row { font-size: 0.75rem; color: var(--text-dim); display: flex; align-items: center; gap: 10px; margin-top: auto; padding-top: 10px; }
+        .doi-row a { color: var(--accent-gold); text-decoration: none; font-family: var(--font-mono); transition: color 0.2s; }
+        .doi-row a:hover { text-decoration: underline; color: #fff; }
 
-        .doi-row {
-            font-size: 0.8rem;
-            color: var(--text-dim);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-top: auto; /* Empuja hacia abajo */
-        }
-
-        .doi-row a {
-            color: var(--accent-gold);
-            text-decoration: none;
-        }
-        .doi-row a:hover { text-decoration: underline; }
-
-        /* FOOTER */
-        footer {
-            margin-top: 60px;
-            border-top: 1px solid var(--border);
-            padding-top: 20px;
-            font-size: 0.75rem;
-            color: var(--text-dim);
-            display: flex;
-            justify-content: space-between;
-        }
-
+        footer { margin-top: 80px; border-top: 1px solid var(--border); padding-top: 20px; font-size: 0.75rem; color: var(--text-dim); display: flex; justify-content: space-between; }
+        
         @media (max-width: 600px) {
             .ledger-grid { grid-template-columns: 1fr; }
             header { flex-direction: column; align-items: flex-start; }
@@ -177,130 +72,272 @@
     <header>
         <div>
             <h1>LIBRO MAYOR TCDS</h1>
-            <div style="color:var(--accent-gold); letter-spacing: 2px; font-size: 0.9rem;">>> REGISTRO UNIFICADO DE ACTIVOS</div>
+            <div style="color:var(--accent-gold); letter-spacing: 2px; font-size: 0.9rem;">>> REGISTRO UNIFICADO DE ACTIVOS [ cite: 2, 7, 23, 56 ]</div>
         </div>
         <div class="meta-info">
             CUSTODIO: Genaro Carrasco Ozuna<br>
-            ESTADO: AUDITADO (TRL-9)<br>
+            ACTUALIZACIÓN: 2026-02-16<br>
             HASH: SHA-256-VALIDATED
         </div>
     </header>
 
     <div class="search-wrapper">
-        <input type="text" id="searchInput" placeholder=">> BUSCAR EN EL LIBRO MAYOR (DOI, TÍTULO, AÑO)...">
+        <input type="text" id="searchInput" placeholder=">> FILTRAR REGISTRO (Ej: Sismo, Entropía, Bio, DOI)...">
     </div>
 
-    <div class="ledger-grid" id="ledger">
-
+    <div class="section-header">/// 01. FUNDAMENTOS Y TEORÍA OPERACIONAL</div>
+    <div class="ledger-grid">
+        
         <article class="entry">
-            <div class="entry-header">
-                <span class="type-tag core">AXIOMA</span>
-                <span class="type-tag">2025</span>
-            </div>
+            <div class="entry-header"><span class="type-tag core">AXIOMA</span><span class="type-tag">2025</span></div>
             <h2>La Entropía Causal</h2>
-            <p style="font-size:0.85rem; color:#888;">Documento fundacional sobre la termodinámica de la información en sistemas TCDS.</p>
-            <div class="doi-row">
-                <i class="fa-solid fa-link"></i>
-                <a href="https://doi.org/10.5281/zenodo.17529309" target="_blank">10.5281/zenodo.17529309</a>
-            </div>
+            <div class="doi-row"><i class="fa-solid fa-link"></i><a href="https://doi.org/10.5281/zenodo.17529309" target="_blank">10.5281/zenodo.17529309</a></div>
         </article>
 
         <article class="entry">
-            <div class="entry-header">
-                <span class="type-tag core">CORE</span>
-                <span class="type-tag">2025</span>
-            </div>
+            <div class="entry-header"><span class="type-tag core">COMPENDIO</span><span class="type-tag">2025</span></div>
             <h2>Teoría Operacional y Compendio Inicial</h2>
-            <p style="font-size:0.85rem; color:#888;">Manual de operaciones y estructura lógica del paradigma TCDS v1.0.</p>
-            <div class="doi-row">
-                <i class="fa-solid fa-link"></i>
-                <a href="https://doi.org/10.5281/zenodo.17530264" target="_blank">10.5281/zenodo.17530264</a>
-            </div>
+            <div class="doi-row"><i class="fa-solid fa-link"></i><a href="https://doi.org/10.5281/zenodo.17530264" target="_blank">10.5281/zenodo.17530264</a></div>
         </article>
 
         <article class="entry">
-            <div class="entry-header">
-                <span class="type-tag seismic">SISMOLOGÍA</span>
-                <span class="type-tag">HUNTER</span>
-            </div>
-            <h2>Sistema Predictivo Sísmico (Sigma Field)</h2>
-            <p style="font-size:0.85rem; color:#888;">Análisis coherencial basado en el campo Σ. Algoritmo de predicción TRL-9.</p>
-            <div class="doi-row">
-                <i class="fa-solid fa-link"></i>
-                <a href="https://doi.org/10.5281/zenodo.17526187" target="_blank">10.5281/zenodo.17526187</a>
-            </div>
+            <div class="entry-header"><span class="type-tag core">CANON</span><span class="type-tag">2025</span></div>
+            <h2>Canon Operacional TCDS 2025</h2>
+            <div class="doi-row"><i class="fa-solid fa-link"></i><a href="https://doi.org/10.5281/zenodo.17848365" target="_blank">10.5281/zenodo.17848365</a></div>
         </article>
 
         <article class="entry">
-            <div class="entry-header">
-                <span class="type-tag core">UNIFICADO</span>
-                <span class="type-tag">2025</span>
-            </div>
-            <h2>TCDS-UNIFICADO: Cromodinámica Sincrónica</h2>
-            <p style="font-size:0.85rem; color:#888;">El corpus teórico completo. Integración de física, biología y sistemas complejos.</p>
-            <div class="doi-row">
-                <i class="fa-solid fa-link"></i>
-                <a href="https://github.com/geozunac3536-jpg/TCDS-UNIFICADO" target="_blank">REPO: TCDS-UNIFICADO</a>
-            </div>
+            <div class="entry-header"><span class="type-tag core">MENTE</span><span class="type-tag">2025</span></div>
+            <h2>La Mente: Estudio de la Conciencia y CSL-H</h2>
+            <div class="doi-row"><i class="fa-solid fa-link"></i><a href="https://doi.org/10.5281/zenodo.17584200" target="_blank">10.5281/zenodo.17584200</a></div>
         </article>
 
         <article class="entry">
-            <div class="entry-header">
-                <span class="type-tag">BIOFÍSICA</span>
-                <span class="type-tag">SALUD</span>
-            </div>
-            <h2>Isomorfismo Inflamación/Expansión</h2>
-            <p style="font-size:0.85rem; color:#888;">Aplicación de la Ley de Balance Coherencial en oncología.</p>
-            <div class="doi-row">
-                <i class="fa-solid fa-link"></i>
-                <a href="https://doi.org/10.5281/zenodo.17848081" target="_blank">10.5281/zenodo.17848081</a>
-            </div>
+            <div class="entry-header"><span class="type-tag core">MENTE</span><span class="type-tag">2025</span></div>
+            <h2>Paquete de Estudio TCDS sobre La Mente</h2>
+            <div class="doi-row"><i class="fa-solid fa-link"></i><a href="https://doi.org/10.5281/zenodo.17584450" target="_blank">10.5281/zenodo.17584450</a></div>
         </article>
-
+        
         <article class="entry">
-            <div class="entry-header">
-                <span class="type-tag">COSMOS</span>
-                <span class="type-tag">TEORÍA</span>
-            </div>
-            <h2>Dualidad Energía Oscura vs. Sincronón</h2>
-            <p style="font-size:0.85rem; color:#888;">Resolución del conflicto de expansión universal mediante fricción del sustrato.</p>
-            <div class="doi-row">
-                <i class="fa-solid fa-link"></i>
-                <a href="https://doi.org/10.5281/zenodo.17848030" target="_blank">10.5281/zenodo.17848030</a>
-            </div>
-        </article>
-
-        <article class="entry">
-            <div class="entry-header">
-                <span class="type-tag">TIEMPO</span>
-                <span class="type-tag">METROLOGÍA</span>
-            </div>
-            <h2>El Pivote Metrológico TCDS ($t_C$)</h2>
-            <p style="font-size:0.85rem; color:#888;">Redefinición del segundo bajo parámetros de coherencia causal.</p>
-            <div class="doi-row">
-                <i class="fa-solid fa-link"></i>
-                <a href="https://doi.org/10.5281/zenodo.17555261" target="_blank">10.5281/zenodo.17555261</a>
-            </div>
+            <div class="entry-header"><span class="type-tag core">FÍSICA</span><span class="type-tag">2025</span></div>
+            <h2>Puentes Físicos</h2>
+            <div class="doi-row"><i class="fa-solid fa-link"></i><a href="https://doi.org/10.5281/zenodo.17510316" target="_blank">10.5281/zenodo.17510316</a></div>
         </article>
 
          <article class="entry">
-            <div class="entry-header">
-                <span class="type-tag core">LEGAL</span>
-                <span class="type-tag">IP</span>
-            </div>
-            <h2>Teoría Operacional (Registro Inicial)</h2>
-            <p style="font-size:0.85rem; color:#888;">Asiento de registro primario de la propiedad intelectual TCDS.</p>
-            <div class="doi-row">
-                <i class="fa-solid fa-link"></i>
-                <a href="https://doi.org/10.5281/zenodo.17460891" target="_blank">10.5281/zenodo.17460891</a>
-            </div>
+            <div class="entry-header"><span class="type-tag core">TEORÍA</span><span class="type-tag">2025</span></div>
+            <h2>Artefacto Causal–Axiomático</h2>
+            <div class="doi-row"><i class="fa-solid fa-link"></i><a href="https://doi.org/10.5281/zenodo.18079265" target="_blank">10.5281/zenodo.18079265</a></div>
+        </article>
+    </div>
+
+    <div class="section-header">/// 02. SISMOLOGÍA Y DEFENSA CIVIL</div>
+    <div class="ledger-grid">
+        
+        <article class="entry">
+            <div class="entry-header"><span class="type-tag seismic">ALERTA</span><span class="type-tag">TRL-9</span></div>
+            <h2>Sistema Predictivo de Defensa Sísmica (Sigma Field)</h2>
+            <div class="doi-row"><i class="fa-solid fa-link"></i><a href="https://doi.org/10.5281/zenodo.17526187" target="_blank">10.5281/zenodo.17526187</a></div>
         </article>
 
+        <article class="entry">
+            <div class="entry-header"><span class="type-tag seismic">VALIDACIÓN</span><span class="type-tag">2025</span></div>
+            <h2>TCDS Forensic Validation: Global-to-Regional Seismic Analysis</h2>
+            <div class="doi-row"><i class="fa-solid fa-link"></i><a href="https://doi.org/10.5281/zenodo.18090968" target="_blank">10.5281/zenodo.18090968</a></div>
+        </article>
+
+        <article class="entry">
+            <div class="entry-header"><span class="type-tag seismic">VALIDACIÓN</span><span class="type-tag">19-S</span></div>
+            <h2>Validación Forense de Precursores (Sismo M7.1 Puebla)</h2>
+            <div class="doi-row"><i class="fa-solid fa-link"></i><a href="https://doi.org/10.5281/zenodo.17769548" target="_blank">10.5281/zenodo.17769548</a></div>
+        </article>
+
+        <article class="entry">
+            <div class="entry-header"><span class="type-tag seismic">HUNTER</span><span class="type-tag">2025</span></div>
+            <h2>Demostración Operativa TCDS–Hunter (TRL-9)</h2>
+            <div class="doi-row"><i class="fa-solid fa-link"></i><a href="https://doi.org/10.5281/zenodo.17923458" target="_blank">10.5281/zenodo.17923458</a></div>
+        </article>
+
+        <article class="entry">
+            <div class="entry-header"><span class="type-tag seismic">EVENTO 0</span><span class="type-tag">2025</span></div>
+            <h2>Evento Cero TCDS — Índice t_C Regional</h2>
+            <div class="doi-row"><i class="fa-solid fa-link"></i><a href="https://doi.org/10.5281/zenodo.17605698" target="_blank">10.5281/zenodo.17605698</a></div>
+        </article>
+
+        <article class="entry">
+            <div class="entry-header"><span class="type-tag seismic">SISTEMA</span><span class="type-tag">2025</span></div>
+            <h2>Sistema Activo en Tiempo Real de Defensa Sísmica</h2>
+            <div class="doi-row"><i class="fa-solid fa-link"></i><a href="https://doi.org/10.5281/zenodo.17851890" target="_blank">10.5281/zenodo.17851890</a></div>
+        </article>
+
+        <article class="entry">
+            <div class="entry-header"><span class="type-tag seismic">VALIDACIÓN</span><span class="type-tag">2025</span></div>
+            <h2>TCDS Sistema Predictivo: Validación Empírica</h2>
+            <div class="doi-row"><i class="fa-solid fa-link"></i><a href="https://doi.org/10.5281/zenodo.17507622" target="_blank">10.5281/zenodo.17507622</a></div>
+        </article>
+    </div>
+
+    <div class="section-header">/// 03. COSMOLOGÍA Y FÍSICA AVANZADA</div>
+    <div class="ledger-grid">
+        
+        <article class="entry">
+            <div class="entry-header"><span class="type-tag cosmos">SINCRONÓN</span><span class="type-tag">2025</span></div>
+            <h2>EL SINCRONÓN σ</h2>
+            <div class="doi-row"><i class="fa-solid fa-link"></i><a href="https://doi.org/10.5281/zenodo.17847894" target="_blank">10.5281/zenodo.17847894</a></div>
+        </article>
+
+        <article class="entry">
+            <div class="entry-header"><span class="type-tag cosmos">COSMOS</span><span class="type-tag">2025</span></div>
+            <h2>Dualidad Cosmológica: Energía Oscura vs Sincronón</h2>
+            <div class="doi-row"><i class="fa-solid fa-link"></i><a href="https://doi.org/10.5281/zenodo.17848030" target="_blank">10.5281/zenodo.17848030</a></div>
+        </article>
+
+        <article class="entry">
+            <div class="entry-header"><span class="type-tag cosmos">ASTRO</span><span class="type-tag">2026</span></div>
+            <h2>Invarianza Topológica en Núcleos Galácticos Activos (AGN)</h2>
+            <div class="doi-row"><i class="fa-solid fa-link"></i><a href="https://doi.org/10.5281/zenodo.18308537" target="_blank">10.5281/zenodo.18308537</a></div>
+        </article>
+
+        <article class="entry">
+            <div class="entry-header"><span class="type-tag cosmos">ATLAS</span><span class="type-tag">2025</span></div>
+            <h2>3I/ATLAS: Predicciones Espectroscópicas</h2>
+            <div class="doi-row"><i class="fa-solid fa-link"></i><a href="https://doi.org/10.5281/zenodo.17562117" target="_blank">10.5281/zenodo.17562117</a></div>
+        </article>
+
+        <article class="entry">
+            <div class="entry-header"><span class="type-tag cosmos">ATLAS</span><span class="type-tag">2025</span></div>
+            <h2>TCDS 3I ATLAS PREDICCIÓN</h2>
+            <div class="doi-row"><i class="fa-solid fa-link"></i><a href="https://doi.org/10.5281/zenodo.17560070" target="_blank">10.5281/zenodo.17560070</a></div>
+        </article>
+
+        <article class="entry">
+            <div class="entry-header"><span class="type-tag cosmos">ATLAS</span><span class="type-tag">2025</span></div>
+            <h2>TCDS 3I ATLAS VALIDACIÓN 2025</h2>
+            <div class="doi-row"><i class="fa-solid fa-link"></i><a href="https://doi.org/10.5281/zenodo.17555759" target="_blank">10.5281/zenodo.17555759</a></div>
+        </article>
+    </div>
+
+    <div class="section-header">/// 04. BIOFÍSICA Y SALUD</div>
+    <div class="ledger-grid">
+        
+        <article class="entry">
+            <div class="entry-header"><span class="type-tag bio">BIO</span><span class="type-tag">2025</span></div>
+            <h2>TCDS-Bio: Isomorfismo Inflamación/Expansión</h2>
+            <div class="doi-row"><i class="fa-solid fa-link"></i><a href="https://doi.org/10.5281/zenodo.17848081" target="_blank">10.5281/zenodo.17848081</a></div>
+        </article>
+
+        <article class="entry">
+            <div class="entry-header"><span class="type-tag bio">BIO</span><span class="type-tag">2026</span></div>
+            <h2>In-Silico Library of Hydro-Optimized Peptide Constructs</h2>
+            <div class="doi-row"><i class="fa-solid fa-link"></i><a href="https://doi.org/10.5281/zenodo.18410838" target="_blank">10.5281/zenodo.18410838</a></div>
+        </article>
+
+        <article class="entry">
+            <div class="entry-header"><span class="type-tag bio">SOFTWARE</span><span class="type-tag">2026</span></div>
+            <h2>OMNIKERNEL-A Evaluator (NO-SIM) v5</h2>
+            <div class="doi-row"><i class="fa-solid fa-link"></i><a href="https://doi.org/10.5281/zenodo.18194092" target="_blank">10.5281/zenodo.18194092</a></div>
+        </article>
+        
+        <article class="entry">
+            <div class="entry-header"><span class="type-tag bio">COGNICIÓN</span><span class="type-tag">2025</span></div>
+            <h2>La Sigma-Prosthesis (Interfaz Cognitiva)</h2>
+            <div class="doi-row"><i class="fa-solid fa-link"></i><a href="https://doi.org/10.5281/zenodo.17848168" target="_blank">10.5281/zenodo.17848168</a></div>
+        </article>
+    </div>
+
+    <div class="section-header">/// 05. TECNOLOGÍA, METROLOGÍA Y HARDWARE</div>
+    <div class="ledger-grid">
+        
+        <article class="entry">
+            <div class="entry-header"><span class="type-tag tech">RELOJ</span><span class="type-tag">2025</span></div>
+            <h2>Reloj Causal TCDS y Segundo Coherencial (SCP)</h2>
+            <div class="doi-row"><i class="fa-solid fa-link"></i><a href="https://doi.org/10.5281/zenodo.17570393" target="_blank">10.5281/zenodo.17570393</a></div>
+        </article>
+
+        <article class="entry">
+            <div class="entry-header"><span class="type-tag tech">METROLOGÍA</span><span class="type-tag">2025</span></div>
+            <h2>El Pivote Metrológico TCDS</h2>
+            <div class="doi-row"><i class="fa-solid fa-link"></i><a href="https://doi.org/10.5281/zenodo.17555261" target="_blank">10.5281/zenodo.17555261</a></div>
+        </article>
+
+        <article class="entry">
+            <div class="entry-header"><span class="type-tag tech">K-RATE</span><span class="type-tag">2025</span></div>
+            <h2>K-Rate y Sigma K-Rate: Calibración Empírica</h2>
+            <div class="doi-row"><i class="fa-solid fa-link"></i><a href="https://doi.org/10.5281/zenodo.18064958" target="_blank">10.5281/zenodo.18064958</a></div>
+        </article>
+
+        <article class="entry">
+            <div class="entry-header"><span class="type-tag tech">SOFTWARE</span><span class="type-tag">2025</span></div>
+            <h2>TCDS_Reloj_Causal_v1.5 (Filtro Shannon/Arnold)</h2>
+            <div class="doi-row"><i class="fa-solid fa-link"></i><a href="https://doi.org/10.5281/zenodo.17677864" target="_blank">10.5281/zenodo.17677864</a></div>
+        </article>
+        
+        <article class="entry">
+            <div class="entry-header"><span class="type-tag tech">OMNIKERNEL</span><span class="type-tag">2025</span></div>
+            <h2>TCDS OMNIKERNEL v5.8.1 (Evidence-Only)</h2>
+            <div class="doi-row"><i class="fa-solid fa-link"></i><a href="https://doi.org/10.5281/zenodo.18111574" target="_blank">10.5281/zenodo.18111574</a></div>
+        </article>
+
+        <article class="entry">
+            <div class="entry-header"><span class="type-tag tech">COLAB</span><span class="type-tag">2025</span></div>
+            <h2>TCDS: Sistema reproducible en Google Colab</h2>
+            <div class="doi-row"><i class="fa-solid fa-link"></i><a href="https://doi.org/10.5281/zenodo.18049613" target="_blank">10.5281/zenodo.18049613</a></div>
+        </article>
+    </div>
+
+    <div class="section-header">/// 06. LEGAL, LICENCIAS Y NEGOCIOS</div>
+    <div class="ledger-grid">
+        
+        <article class="entry">
+            <div class="entry-header"><span class="type-tag core">LEGAL</span><span class="type-tag">2025</span></div>
+            <h2>TCDS-LICENCIAS: Licencias del Proyecto</h2>
+            <div class="doi-row"><i class="fa-solid fa-link"></i><a href="https://doi.org/10.5281/zenodo.17498200" target="_blank">10.5281/zenodo.17498200</a></div>
+        </article>
+
+        <article class="entry">
+            <div class="entry-header"><span class="type-tag core">NEGOCIOS</span><span class="type-tag">2025</span></div>
+            <h2>TCDS-Σ Business Plan & Dossier</h2>
+            <div class="doi-row"><i class="fa-solid fa-link"></i><a href="https://doi.org/10.5281/zenodo.17494368" target="_blank">10.5281/zenodo.17494368</a></div>
+        </article>
+
+        <article class="entry">
+            <div class="entry-header"><span class="type-tag core">ECONOMÍA</span><span class="type-tag">2025</span></div>
+            <h2>TCDS Gradiente Económico</h2>
+            <div class="doi-row"><i class="fa-solid fa-link"></i><a href="https://doi.org/10.5281/zenodo.17491112" target="_blank">10.5281/zenodo.17491112</a></div>
+        </article>
+    </div>
+
+     <div class="section-header">/// 07. REPOSITORIOS CANÓNICOS (GITHUB-ZENODO LINKS)</div>
+    <div class="ledger-grid">
+        
+        <article class="entry">
+            <div class="entry-header"><span class="type-tag">REPO</span><span class="type-tag">MAESTRO</span></div>
+            <h2>geozunac3536-jpg/TCDS-UNIFICADO</h2>
+            <div class="doi-row"><i class="fa-brands fa-github"></i><a href="https://doi.org/10.5281/zenodo.17450317" target="_blank">10.5281/zenodo.17450317</a></div>
+        </article>
+
+        <article class="entry">
+            <div class="entry-header"><span class="type-tag">REPO</span><span class="type-tag">OPERACIONAL</span></div>
+            <h2>geozunac3536-jpg/TCDS-Teoria-Operacional</h2>
+            <div class="doi-row"><i class="fa-brands fa-github"></i><a href="https://doi.org/10.5281/zenodo.17460101" target="_blank">10.5281/zenodo.17460101</a></div>
+        </article>
+
+        <article class="entry">
+            <div class="entry-header"><span class="type-tag">REPO</span><span class="type-tag">PREDICTIVO</span></div>
+            <h2>geozunac3536-jpg/TCDS-SISTEMA-PREDICTIVO</h2>
+            <div class="doi-row"><i class="fa-brands fa-github"></i><a href="https://doi.org/10.5281/zenodo.17452046" target="_blank">10.5281/zenodo.17452046</a></div>
+        </article>
+
+        <article class="entry">
+            <div class="entry-header"><span class="type-tag">REPO</span><span class="type-tag">PORTAL</span></div>
+            <h2>geozunac3536-jpg/TCDS-Portal-de-Documentos</h2>
+            <div class="doi-row"><i class="fa-brands fa-github"></i><a href="https://doi.org/10.5281/zenodo.17450327" target="_blank">10.5281/zenodo.17450327</a></div>
+        </article>
     </div>
 
     <footer>
-        <div>© 2025 MOTOR SINCRÓNICO DE LUZ</div>
-        <div>LIBRO MAYOR TCDS // VER: 2.4.1</div>
+        <div>© 2026 MOTOR SINCRÓNICO DE LUZ</div>
+        <div>LIBRO MAYOR TCDS // VER: 3.0.0</div>
     </footer>
 
     <script>
@@ -308,6 +345,7 @@
         document.getElementById('searchInput').addEventListener('keyup', function() {
             let filter = this.value.toUpperCase();
             let entries = document.querySelectorAll('.entry');
+            let headers = document.querySelectorAll('.section-header');
             
             entries.forEach(entry => {
                 let text = entry.textContent || entry.innerText;
@@ -317,6 +355,8 @@
                     entry.style.display = "none";
                 }
             });
+
+            // Ocultar headers si no hay resultados en esa sección (Opcional, avanzado)
         });
     </script>
 </body>
