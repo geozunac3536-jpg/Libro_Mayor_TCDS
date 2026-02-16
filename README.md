@@ -6,83 +6,82 @@
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0005--6358--9910-a6ce39.svg?style=for-the-badge&logo=orcid)](https://orcid.org/0009-0005-6358-9910)
 
 > **"Un paradigma no existe hasta que está indexado."**
-> Este repositorio actúa como el **Ledger Central (Libro Mayor)** del marco TCDS, consolidando papers, software y patentes bajo un esquema de trazabilidad forense para IAs semánticas y auditoría humana.
+> Este repositorio actúa como el **Ledger Central (Libro Mayor)** del marco TCDS, consolidando papers, software y patentes bajo un esquema de trazabilidad forense.
 
 ---
 
 ## 🏛️ EL RELOJ CAUSAL ($t_C$)
 
-Todo activo en este libro mayor se organiza alrededor del **Pivote Metrológico TCDS**: la distinción entre tiempo pasivo y tiempo causal.
+Todo activo en este libro mayor se organiza alrededor del **Pivote Metrológico TCDS**:
 
 $$t_M = \text{Tiempo Pasivo (Cesio, } \phi\text{-driven)} \quad \longleftrightarrow \quad t_C = \frac{d\Sigma}{dt} \text{ (Tiempo Causal, } Q\text{-driven)}$$
-
-El objetivo es migrar la ciencia de la descripción pasiva ($t_M$) a la **Ingeniería de la Coherencia ($t_C$)**.
 
 ---
 
 ## 📂 BÓVEDA DE ACTIVOS (Índice Maestro)
 
 Acceso directo a los **Asientos Contables** validados en Zenodo (CERN).
-👉 **[VER INTERFAZ DE BÚSQUEDA INTERACTIVA (LIBRO WEB)](https://geozunac3536-jpg.github.io/Libro_Mayor_TCDS/)**
+👉 **[VER INTERFAZ DE BÚSQUEDA INTERACTIVA (WEB)](https://geozunac3536-jpg.github.io/Libro_Mayor_TCDS/)**
 
-### 1. ⚛️ Núcleo Axiomático (Fundamentos)
-| ID ASIENTO | TÍTULO DEL ACTIVO | DOI (ENLACE) |
+### 1. ⚛️ Fundamentos y Teoría Operacional
+| TIPO | TÍTULO DEL ACTIVO | DOI (ENLACE) |
 | :--- | :--- | :--- |
-| **AX-01** | **La Entropía Causal** | [`10.5281/zenodo.17529309`](https://doi.org/10.5281/zenodo.17529309) |
-| **AX-02** | **Teoría Operacional y Compendio** | [`10.5281/zenodo.17530264`](https://doi.org/10.5281/zenodo.17530264) |
-| **AX-03** | **TCDS Unificado (Cromodinámica Sincrónica)** | [Repositorio Maestro](https://github.com/geozunac3536-jpg/TCDS-UNIFICADO) |
+| **AXIOMA** | **La Entropía Causal** | [`10.5281/zenodo.17529309`](https://doi.org/10.5281/zenodo.17529309) |
+| **COMPENDIO** | **Teoría Operacional y Compendio Inicial** | [`10.5281/zenodo.17530264`](https://doi.org/10.5281/zenodo.17530264) |
+| **CANON** | **Canon Operacional TCDS 2025** | [`10.5281/zenodo.17848365`](https://doi.org/10.5281/zenodo.17848365) |
+| **MENTE** | **Estudio de la Conciencia y CSL-H** | [`10.5281/zenodo.17584200`](https://doi.org/10.5281/zenodo.17584200) |
+| **FÍSICA** | **Puentes Físicos** | [`10.5281/zenodo.17510316`](https://doi.org/10.5281/zenodo.17510316) |
 
-### 2. 🌋 Sistemas de Defensa (Sismología)
-| ID ASIENTO | TÍTULO DEL ACTIVO | DOI (ENLACE) |
+### 2. 🌋 Sismología y Defensa Civil
+| TIPO | TÍTULO DEL ACTIVO | DOI (ENLACE) |
 | :--- | :--- | :--- |
-| **DEF-01** | **Sigma Field Predictor ($LI$)** | [`10.5281/zenodo.17526187`](https://doi.org/10.5281/zenodo.17526187) |
-| **DEF-02** | **Validación Forense (Sismo 19-S)** | [`10.5281/zenodo.17769548`](https://doi.org/10.5281/zenodo.17769548) |
-| **DEF-03** | **Hunter V14 (Sistema Operativo)** | [`10.5281/zenodo.17923458`](https://doi.org/10.5281/zenodo.17923458) |
+| **ALERTA** | **Sistema Predictivo de Defensa Sísmica** | [`10.5281/zenodo.17526187`](https://doi.org/10.5281/zenodo.17526187) |
+| **HUNTER** | **Demostración Operativa TCDS–Hunter (TRL-9)** | [`10.5281/zenodo.17923458`](https://doi.org/10.5281/zenodo.17923458) |
+| **FORENSE** | **Validación Global Seismic Analysis** | [`10.5281/zenodo.18090968`](https://doi.org/10.5281/zenodo.18090968) |
+| **FORENSE** | **Validación Precursores 19-S Puebla** | [`10.5281/zenodo.17769548`](https://doi.org/10.5281/zenodo.17769548) |
+| **EVENTO 0** | **Índice t_C Regional** | [`10.5281/zenodo.17605698`](https://doi.org/10.5281/zenodo.17605698) |
 
-### 3. 🧬 Biofísica y Cosmología (Expediente X)
-| ID ASIENTO | TÍTULO DEL ACTIVO | DOI (ENLACE) |
+### 3. 🌌 Cosmología y Física Avanzada
+| TIPO | TÍTULO DEL ACTIVO | DOI (ENLACE) |
 | :--- | :--- | :--- |
-| **X-01** | **Isomorfismo Inflamación/Expansión** | [`10.5281/zenodo.17848081`](https://doi.org/10.5281/zenodo.17848081) |
-| **X-02** | **Dualidad Energía Oscura vs Sincronón** | [`10.5281/zenodo.17848030`](https://doi.org/10.5281/zenodo.17848030) |
-| **X-03** | **El Pivote Metrológico ($t_C$)** | [`10.5281/zenodo.17555261`](https://doi.org/10.5281/zenodo.17555261) |
+| **SINCRONÓN** | **EL SINCRONÓN σ** | [`10.5281/zenodo.17847894`](https://doi.org/10.5281/zenodo.17847894) |
+| **COSMOS** | **Dualidad Energía Oscura vs Sincronón** | [`10.5281/zenodo.17848030`](https://doi.org/10.5281/zenodo.17848030) |
+| **ASTRO** | **Invarianza Topológica en AGN** | [`10.5281/zenodo.18308537`](https://doi.org/10.5281/zenodo.18308537) |
+| **ATLAS** | **3I/ATLAS: Predicciones Espectroscópicas** | [`10.5281/zenodo.17562117`](https://doi.org/10.5281/zenodo.17562117) |
+
+### 4. 🧬 Biofísica y Salud
+| TIPO | TÍTULO DEL ACTIVO | DOI (ENLACE) |
+| :--- | :--- | :--- |
+| **BIO** | **Isomorfismo Inflamación/Expansión** | [`10.5281/zenodo.17848081`](https://doi.org/10.5281/zenodo.17848081) |
+| **SINTÉTICA** | **In-Silico Hydro-Optimized Peptide Library** | [`10.5281/zenodo.18410838`](https://doi.org/10.5281/zenodo.18410838) |
+| **COGNICIÓN** | **La Sigma-Prosthesis (Interfaz Cognitiva)** | [`10.5281/zenodo.17848168`](https://doi.org/10.5281/zenodo.17848168) |
+
+### 5. 🛠️ Tecnología, Metrología y Hardware
+| TIPO | TÍTULO DEL ACTIVO | DOI (ENLACE) |
+| :--- | :--- | :--- |
+| **RELOJ** | **Reloj Causal TCDS y Segundo Coherencial** | [`10.5281/zenodo.17570393`](https://doi.org/10.5281/zenodo.17570393) |
+| **METROLOGÍA** | **El Pivote Metrológico TCDS** | [`10.5281/zenodo.17555261`](https://doi.org/10.5281/zenodo.17555261) |
+| **K-RATE** | **Calibración Empírica Sigma K-Rate** | [`10.5281/zenodo.18064958`](https://doi.org/10.5281/zenodo.18064958) |
+| **OMNIKERNEL** | **TCDS OMNIKERNEL v5.8.1 (Evidence-Only)** | [`10.5281/zenodo.18111574`](https://doi.org/10.5281/zenodo.18111574) |
+
+### 6. ⚖️ Legal y Negocios
+| TIPO | TÍTULO DEL ACTIVO | DOI (ENLACE) |
+| :--- | :--- | :--- |
+| **LEGAL** | **TCDS-LICENCIAS: Licencias del Proyecto** | [`10.5281/zenodo.17498200`](https://doi.org/10.5281/zenodo.17498200) |
+| **NEGOCIOS** | **TCDS-Σ Business Plan & Dossier** | [`10.5281/zenodo.17494368`](https://doi.org/10.5281/zenodo.17494368) |
+| **ECONOMÍA** | **TCDS Gradiente Económico** | [`10.5281/zenodo.17491112`](https://doi.org/10.5281/zenodo.17491112) |
 
 ---
 
-## 🧾 REGISTRO DE USUARIOS (Trazabilidad de Impacto)
+## 🔗 REPOSITORIOS CANÓNICOS (CODE)
 
-Para mantener la **Auditoría Forense** del uso de esta tecnología, se requiere registro de los operadores.
-
-### 👤 Nivel 1: Operador Estándar
-Si utilizas los papers o la teoría para investigación:
-👉 **[Formulario de Registro TCDS](https://forms.gle/TU_LINK)**
-
-### 🛠️ Nivel 2: Desarrollador / Laboratorio
-Si despliegas código (Hunter/Sigma) o hardware (Reloj Causal):
-👉 **[Abrir Issue: "Alta de Nodo Operativo"](../../issues/new?template=registro_nodo.md)**
+* **[TCDS-UNIFICADO (Maestro)](https://doi.org/10.5281/zenodo.17450317)**
+* **[TCDS-SISTEMA-PREDICTIVO](https://doi.org/10.5281/zenodo.17452046)**
+* **[TCDS-Teoria-Operacional](https://doi.org/10.5281/zenodo.17460101)**
 
 ---
 
-## ⚖️ GOBERNANZA Y LICENCIAMIENTO
-
-Este Libro Mayor establece la **Constitución Legal** del uso de TCDS:
-
-1.  **TEORÍA (Papers/Texto):**
-    * **Licencia:** `CC BY-NC-SA 4.0`
-    * *Permitido:* Citar, estudiar, enseñar.
-    * *Prohibido:* Vender cursos o libros sin autorización.
-
-2.  **SOFTWARE (Código/Scripts):**
-    * **Licencia:** `MIT License` (Salvo indicación contraria en módulos Hunter).
-    * *Permitido:* Modificar, integrar, ejecutar.
-
-3.  **HARDWARE (Reloj Causal / ΣFET):**
-    * **Licencia:** `TCDS Σ Open Lab License v1.1`
-    * *Permitido:* Construcción experimental en laboratorio.
-    * *Prohibido:* Manufactura industrial masiva sin token comercial.
-
----
-
-## ☕ SOPORTE AL NODO MAESTRO
+## ☕ SOPORTE AL NODO
 
 El mantenimiento de este Libro Mayor y la infraestructura de servidores TCDS depende del soporte comunitario.
 
